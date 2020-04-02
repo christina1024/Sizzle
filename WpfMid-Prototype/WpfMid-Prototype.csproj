@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Database\Recipe.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -158,148 +159,155 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Resource Include="Images\Image1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image2.png" />
+    <Resource Include="Images\Image2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image3.png" />
+    <Resource Include="Images\Image3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image4.png" />
+    <Resource Include="Images\Image4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image5.png" />
+    <Resource Include="Images\Image5.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image6.png" />
+    <Resource Include="Images\Image6.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image7.png" />
+    <Resource Include="Images\Image7.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image8.png" />
+    <Resource Include="Images\Image8.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image9.png" />
+    <Resource Include="Images\Image9.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image10.png" />
+    <Resource Include="Images\Image10.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image11.png" />
+    <Resource Include="Images\Image11.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image12.png" />
+    <Resource Include="Images\Image12.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image13.png" />
+    <Resource Include="Images\Image13.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image14.png" />
+    <Resource Include="Images\Image14.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image15.png" />
+    <Resource Include="Images\Image15.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image16.png" />
+    <Resource Include="Images\Image16.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image17.png" />
+    <Resource Include="Images\Image17.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image18.png" />
+    <Resource Include="Images\Image18.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image19.png" />
+    <Resource Include="Images\Image19.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image20.png" />
+    <Resource Include="Images\Image20.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image21.png" />
+    <Resource Include="Images\Image21.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image22.png" />
+    <Resource Include="Images\Image22.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image23.png" />
+    <Resource Include="Images\Image23.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image24.png" />
+    <Resource Include="Images\Image24.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image25.png" />
+    <Resource Include="Images\Image25.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image26.png" />
+    <Resource Include="Images\Image26.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image27.png" />
+    <Resource Include="Images\Image27.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image28.png" />
+    <Resource Include="Images\Image28.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image29.png" />
+    <Resource Include="Images\Image29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image30.png" />
+    <Resource Include="Images\Image30.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image31.png" />
+    <Resource Include="Images\Image31.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image32.png" />
+    <Resource Include="Images\Image32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image33.png" />
+    <Resource Include="Images\Image33.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image_Placeholder.png" />
+    <Resource Include="Images\Image_Placeholder.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image_Add.png" />
+    <Resource Include="Images\Image_Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image34.png" />
+    <Resource Include="Images\Image34.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image35.png" />
+    <Resource Include="Images\Image35.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image36.png" />
+    <Resource Include="Images\Image36.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="5-star-rating-icon-isolated-badge-collection-vector-24070448 %282%29.jpg" />
+    <Resource Include="Images\5 Stars.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="5-star-rating-icon-isolated-badge-collection-vector-24070448 %283%29.jpg" />
+    <Resource Include="Images\4 Stars.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logo.jpg" />
+    <Resource Include="Images\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image_List.png" />
+    <Resource Include="Images\Image_List.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image_Refresh.png" />
+    <Resource Include="Images\Image_Refresh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image_Clock.png" />
+    <Resource Include="Images\Image_Clock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image37.png" />
+    <Resource Include="Images\Image37.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image38.png" />
+    <Resource Include="Images\Image38.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image7.jpg" />
+    <Resource Include="Images\Image7.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image39.png" />
+    <Resource Include="Images\Image39.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Image_Quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Image_User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
