@@ -11,7 +11,7 @@
     <Grid RenderTransformOrigin="0.471,0.055" Margin="0,0,0,-2">
         <Canvas HorizontalAlignment="Left" Height="792" Margin="10,0,0,0" VerticalAlignment="Top" Width="1270" Background="White">
 
-            <Image Height="142" Source="logo.jpg" Stretch="Fill" Width="162" RenderTransformOrigin="0.5,0.5" Canvas.Left="307" Canvas.Top="-15">
+            <Image Height="142" Source="Images/logo.jpg" Stretch="Fill" Width="162" RenderTransformOrigin="0.5,0.5" Canvas.Left="307" Canvas.Top="-15">
             </Image>
         </Canvas>
 
@@ -26,38 +26,38 @@
                 <StackPanel Orientation="Horizontal" Width="1075" Height="268" >
 
                     <StackPanel Name="porkBelly" Orientation="Vertical" Width="212">
-                        <Image x:Name="image1" Height="172" Source="Image5.png" Stretch="Fill" Width="166"/>
+                        <Image x:Name="image1" Height="172" Source="Images/Image5.png" Stretch="Fill" Width="166"/>
                         <Label Content="Pork Belly" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (2).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                        <Image Source="Images/5 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label  Content="1010" FontSize="12" Height="23" Margin="135,-20,32,0"/>
                         <Label Content="Pork belly is all the rage in " Height="55" Margin="23,0"/>
                     </StackPanel>
 
                     <StackPanel Name="pasta" Orientation="Vertical" Width="212">
-                        <Image x:Name="image2"  Height="168" Source="Image6.png" Stretch="Fill" Width="183" Margin="14,0"/>
+                        <Image x:Name="image2"  Height="168" Source="Images/Image6.png" Stretch="Fill" Width="183" Margin="14,0"/>
                         <Label Content="Pasta" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0" />
+                        <Image Source="Images/4 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0" />
                         <Label  Content="985" FontSize="12" Height="23" Margin="125,-20,32,0"/>
                     </StackPanel>
 
                     <StackPanel Name="veggieTaco" Orientation="Vertical" Width="212">
-                        <Image x:Name="image3"  Height="166" Source="Image7.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                        <Image x:Name="image3"  Height="166" Source="Images/Image7.png" Stretch="Fill" Width="183" Margin="16,0"/>
                         <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (2).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                        <Image Source="Images/5 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="2054"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
                     </StackPanel>
 
                     <StackPanel Name="burger" Orientation="Vertical" Width="212">
-                        <Image x:Name="image4"  Height="165" Source="Image8.png" Stretch="Fill" Width="183"/>
+                        <Image x:Name="image4"  Height="165" Source="Images/Image8.png" Stretch="Fill" Width="183"/>
                         <Label Content="Burger" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" FontSize="18" Margin="73,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (2).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                        <Image Source="Images/4 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="743" FontSize="12" Height="23" Margin="125,-20,32,0"/>
                     </StackPanel>
 
                     <StackPanel Name="milkTea" Orientation="Vertical" Width="212">
-                        <Image x:Name="image5"  Height="161" Source="Image10.png" Stretch="Fill" Width="184"/>
+                        <Image x:Name="image5"  Height="161" Source="Images/Image10.png" Stretch="Fill" Width="184"/>
                         <Label Content="Milk Tea " HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="18" Margin="70,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                        <Image Source="Images/5 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="685" FontSize="12" Height="23" Margin="125,-20,32,0"/>
                     </StackPanel>
 
@@ -70,15 +70,15 @@
 
 
                 <StackPanel Orientation="Horizontal" Width="1073">
-                    <Image x:Name="image21" Height="178" Source="Image24.png" Stretch="Fill" Width="182"/>
+                    <Image x:Name="image21" Height="178" Source="Images/Image24.png" Stretch="Fill" Width="182"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image22" Height="170" Source="Image26.png" Stretch="Fill" Width="175"/>
+                    <Image x:Name="image22" Height="170" Source="Images/Image26.png" Stretch="Fill" Width="175"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image23" Height="165" Source="Image27.png" Stretch="Fill" Width="176"/>
+                    <Image x:Name="image23" Height="165" Source="Images/Image27.png" Stretch="Fill" Width="176"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image24" Height="170"  Source="Image28.png" Stretch="Fill" Width="178"/>
+                    <Image x:Name="image24" Height="170"  Source="Images/Image28.png" Stretch="Fill" Width="178"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image25" Height="170" Source="Image29.png" Stretch="Fill" Width="177"/>
+                    <Image x:Name="image25" Height="170" Source="Images/Image29.png" Stretch="Fill" Width="177"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Width="1055">
@@ -90,11 +90,11 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="30" Width="1071">
-                    <Image x:Name="image31" Height="172" Source="Image30.png" Stretch="Fill" Width="183"/>
+                    <Image x:Name="image31" Height="172" Source="Images/Image30.png" Stretch="Fill" Width="183"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image32" Height="172" Source="Image31.png" Stretch="Fill" Width="179"/>
+                    <Image x:Name="image32" Height="172" Source="Images/Image31.png" Stretch="Fill" Width="179"/>
                     <Label Width="42"></Label>
-                    <Image x:Name="image33" Height="172" Source="Image32.png" Stretch="Fill" Width="173"/>
+                    <Image x:Name="image33" Height="172" Source="Images/Image32.png" Stretch="Fill" Width="173"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Width="1067">
@@ -110,9 +110,9 @@
 
                 <StackPanel Orientation="Horizontal" Height="260" Width="1083">
                     <StackPanel Orientation="Vertical" Width="232" Margin="0,0,0,-30">
-                        <Image  Height="172" Source="Image5.png" Stretch="Fill" Width="166"/>
+                        <Image  Height="172" Source="Images/Image5.png" Stretch="Fill" Width="166"/>
                         <Label Content="Pork Belly" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
-                        <Image Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (2).jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                        <Image Source="Images/5 Stars.jpg" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label  Content="1010" FontSize="12" Height="23" Margin="135,-20,32,0"/>
                         <Label Content="Pork belly is all the rage in " Height="55" Margin="23,0"/>
                     </StackPanel>
@@ -133,7 +133,7 @@
             <Button Name="following" Content="Following" HorizontalAlignment="Left" Margin="716,87,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="#FFF7F5EF" FontSize="22"/>
             <Button Name="savedRecipe" Content="Saved Recipe" HorizontalAlignment="Left" Margin="860,87,0,0" VerticalAlignment="Top" Width="146" Height="46" Background="#FFF7F5EF" FontSize="22" RenderTransformOrigin="1.328,0.413"/>
             <Label Content="Welcome John" HorizontalAlignment="Left" Margin="1068,35,0,0" VerticalAlignment="Top" Width="164" FontSize="22"/>
-            <Image Name="search" Source="Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="39" Canvas.Left="830" Canvas.Top="35" Width="37"/>
+            <Image Name="search" Source="Images/Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="39" Canvas.Left="830" Canvas.Top="35" Width="37"/>
         </Canvas>
 
     </Grid>

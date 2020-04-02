@@ -26,8 +26,8 @@
 
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
             <Canvas Background="#fafafa" Width="1280">
-                <Image Height="130" Source="Image_Placeholder.png" Stretch="Fill" Width="130" Canvas.Left="170" Canvas.Top="261"/>
-                <Image Source="Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
+                <Image Height="130" Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Canvas.Left="170" Canvas.Top="261"/>
+                <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
                 <TextBox HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" FontSize="18" Canvas.Left="371" Canvas.Top="67"/>
                 <TextBox HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" FontSize="18" Canvas.Left="371" Canvas.Top="261"/>
                 <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Width="85" Height="30" Canvas.Left="967" Canvas.Top="303"/>
@@ -39,10 +39,10 @@
                 <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="69" Canvas.Top="566" Width="175" Height="33"/>
                 <Label Content="1." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
                 <Label Content="2." FontSize="20" FontFamily="Californian FB" Canvas.Left="102" Canvas.Top="261"/>
-                <Image Height="28" Source="Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28"/>
+                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28"/>
             </Canvas>
         </ScrollViewer>
-        <Image Source="Image_Add.png" Margin="890,630,362,142"/>
+        <Image Source="Images/Image_Add.png" Margin="890,630,362,142"/>
         <Label Content="Add more step" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Margin="930,630,0,0"/>
 
 

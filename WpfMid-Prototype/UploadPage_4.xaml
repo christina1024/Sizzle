@@ -34,7 +34,7 @@
 
                     <Canvas Height="220" Background="White" Canvas.Left="10" Canvas.Top="10" Width="310">
 
-                        <Image Height="40" Source="Image_User.png" Canvas.Left="46" Canvas.Top="170" Width="43"/>
+                        <Image Height="40" Source="Images/Image_User.png" Canvas.Left="46" Canvas.Top="170" Width="43"/>
                         <Label Content="J.K.Cook" FontSize="22" FontFamily="Calibri" Canvas.Left="94" Canvas.Top="163" FontWeight="Bold"/>
                         <Label Content="Love it vagen" FontSize="16" FontFamily="Calibri" Canvas.Left="94" Canvas.Top="186"/>
                         <Button Content="Follow" FontSize="20" FontFamily="Calibri" Canvas.Left="215" Canvas.Top="182" Width="76"/>
@@ -42,18 +42,18 @@
                         <Label Content="Portion: 2" FontSize="18" Canvas.Left="10" Canvas.Top="78"/>
                         <Label Content="Difficulity: " FontSize="18" Canvas.Left="10" Canvas.Top="102"/>
                         <Label Content="By" FontSize="20" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="176"/>
-                        <Image Height="28" Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Canvas.Left="94" Canvas.Top="102" Width="110"/>
+                        <Image Height="28" Source="Images/4 Stars.jpg" Canvas.Left="94" Canvas.Top="102" Width="110"/>
                         <Label Content="- Dairy Free" FontSize="16" Canvas.Left="208" FontStyle="Italic"/>
                         <Label Content="- Vegetarian" FontSize="16" Canvas.Left="204" Canvas.Top="16" FontStyle="Italic"/>
                         <Label Content="Star: " FontSize="18" Canvas.Left="10" Canvas.Top="54"/>
-                        <Image Height="28" Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Canvas.Left="55" Canvas.Top="57" Width="110"/>
+                        <Image Height="28" Source="Images/4 Stars.jpg" Canvas.Left="55" Canvas.Top="57" Width="110"/>
                         <Label Content="Prep Time: 15min    CookTime: 1h" FontSize="18" Canvas.Left="10" Canvas.Top="126"/>
                     </Canvas>
                     <Canvas Height="220" Background="White" Canvas.Left="340" Canvas.Top="10" Width="939">
-                        <Image Height="200" Source="Image7.png" Stretch="Fill" Width="205" Canvas.Left="354" Canvas.Top="10"/>
+                        <Image Height="200" Source="Images/Image7.png" Stretch="Fill" Width="205" Canvas.Left="354" Canvas.Top="10"/>
                         <Image Height="100" Canvas.Left="538" Canvas.Top="95" Width="100"/>
-                        <Image Height="164" Source="Image37.png" Stretch="Fill" Width="188" Canvas.Left="120" Canvas.Top="31"/>
-                        <Image Height="164" Source="Image7.jpg" Stretch="Fill" Width="206" Canvas.Left="609" Canvas.Top="31"/>
+                        <Image Height="164" Source="Images/Image37.png" Stretch="Fill" Width="188" Canvas.Left="120" Canvas.Top="31"/>
+                        <Image Height="164" Source="Images/Image7.jpg" Stretch="Fill" Width="206" Canvas.Left="609" Canvas.Top="31"/>
 
                     </Canvas>
                     <Canvas Height="542" Background="White" Canvas.Left="10" Canvas.Top="240" Width="310">
@@ -106,22 +106,22 @@
                             <Run Text="1 cup"/>
                         </TextBlock>
 
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="76" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="76" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="156" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="114" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="316" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="276" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="236" Width="20"/>
-                        <Image Height="20" Source="Image_Refresh.png" Canvas.Left="10" Canvas.Top="197" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="316" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="276" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="236" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="197" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="156" Width="20"/>
-                        <Image Height="20" Source="Image_Add.png" Canvas.Left="273" Canvas.Top="114" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="76" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="76" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="156" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="114" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="316" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="276" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="236" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Refresh.png" Canvas.Left="10" Canvas.Top="197" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="316" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="276" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="236" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="197" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="156" Width="20"/>
+                        <Image Height="20" Source="Images/Image_Add.png" Canvas.Left="273" Canvas.Top="114" Width="20"/>
                         <Button Content="Add to your shopping list" FontSize="20" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="504" Width="283"/>
-                        <Image Height="24" Source="Image_List.png" Canvas.Left="254" Canvas.Top="504" Width="39"/>
+                        <Image Height="24" Source="Images/Image_List.png" Canvas.Left="254" Canvas.Top="504" Width="39"/>
 
                     </Canvas>
 
@@ -142,17 +142,17 @@
                             </TabItem>
                         </TabControl>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="1. Heat a medium saucepan over medium heat. Once hot, add rinsed." FontFamily="Californian FB" FontSize="20" Canvas.Top="58" Height="56" Width="498"/>
-                        <Image Height="40" Source="Image_Clock.png" Canvas.Left="852" Canvas.Top="58" Width="46"/>
+                        <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="58" Width="46"/>
                         <Border BorderThickness="1" Height="78" Background="#e8e8e8" Canvas.Top="119" Width="924" Opacity="0.495"/>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="2. Add Vegetable broth and water and bring back to a boil over medium heat." FontFamily="Californian FB" FontSize="20" Canvas.Top="136" Height="56" Width="498"/>
-                        <Image Height="40" Source="Image_Clock.png" Canvas.Left="852" Canvas.Top="136" Width="46"/>
+                        <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="136" Width="46"/>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="3. Preheat oven to 375." FontFamily="Californian FB" FontSize="20" Canvas.Top="226" Height="56" Width="498"/>
                         <Border BorderThickness="1" Height="78" Background="#e8e8e8" Canvas.Top="272" Width="924" Opacity="0.495"/>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="4. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="287" Height="56" Width="498"/>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="5. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="373" Height="56" Width="498"/>
                         <Border BorderThickness="1" Height="78" Background="#e8e8e8" Canvas.Top="434" Width="924" Opacity="0.495"/>
                         <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="6. Bake for 30 minutes." FontFamily="Californian FB" FontSize="20" Canvas.Top="462" Height="56" Width="498"/>
-                        <Image Height="40" Source="Image_Clock.png" Canvas.Left="852" Canvas.Top="452" Width="46"/>
+                        <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="452" Width="46"/>
 
 
 

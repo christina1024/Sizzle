@@ -26,8 +26,8 @@
 
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
             <Canvas Background="#fafafa" Width="1280">
-                <Image Height="150" Source="Image7.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67"/>
-                <Image Source="Image_Placeholder.png" Stretch="Fill" Width="150" Height="150" Canvas.Left="122" Canvas.Top="67"/>
+                <Image Height="150" Source="Images/Image7.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67"/>
+                <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="150" Height="150" Canvas.Left="122" Canvas.Top="67"/>
 
                 <Label Content="Recipe Name: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="45"/>
                 <TextBox HorizontalAlignment="Left" Height="29" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="368" FontSize="18" Canvas.Left="728" Canvas.Top="45"/>
@@ -46,7 +46,7 @@
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="866" Canvas.Top="204"/>
                 <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="830" Canvas.Top="566" Width="175" Height="33"/>
                 <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1041" Canvas.Top="566" Width="175" Height="33"/>
-                <Image Height="47" Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Canvas.Left="716" Canvas.Top="90" Width="146"/>
+                <Image Height="47" Source="Images/4 Stars.jpg" Canvas.Left="716" Canvas.Top="90" Width="146"/>
             </Canvas>
         </ScrollViewer>
 

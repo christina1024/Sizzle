@@ -15,7 +15,7 @@
         <StackPanel HorizontalAlignment="Left" Height="608" Margin="0,92,0,0" VerticalAlignment="Top" Width="500">
             <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBox HorizontalAlignment="Center" Height="37" TextWrapping="Wrap" Text="Veggie Taco" VerticalAlignment="Center" FontSize="20" Width="300" TextChanged="TextBox_TextChanged" Margin="100,0,0,0"/>
-                <Image x:Name="search" Source="Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="38" Width="37" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <Image x:Name="search" Source="Images/Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="38" Width="37" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
                 <Label Content="With" FontSize="20" Margin="25,0,0,0" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="37"/>
@@ -108,15 +108,15 @@
 
         </StackPanel>
         <StackPanel Margin="544,91,553,386" Orientation="Vertical">
-            <Image x:Name="image3" Source="Image7.png" Stretch="Fill" Height="177"/>
+            <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="177"/>
             <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="24,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
         </StackPanel>
         <StackPanel Margin="793,91,303,386" Orientation="Vertical">
-            <Image Source="Image37.png" Stretch="Fill" Height="176"/>
+            <Image Source="Images/Image37.png" Stretch="Fill" Height="176"/>
             <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
         </StackPanel>
         <StackPanel Margin="1043,93,54,386" Orientation="Vertical">
-            <Image Source="Image39.png" Stretch="Fill" Height="175"/>
+            <Image Source="Images/Image39.png" Stretch="Fill" Height="175"/>
 
             <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
         </StackPanel>

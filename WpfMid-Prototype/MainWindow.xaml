@@ -9,7 +9,7 @@
     <Grid RenderTransformOrigin="0.471,0.055" Margin="0,0,0,-2">
 
         <Frame x:Name="StartMain" NavigationUIVisibility="Hidden"></Frame>
-        <Image x:Name="menuButton" Source="Image13.png" Stretch="Fill" MouseMove="menuButton_MouseMove" MouseDown="menuButton_MouseDown" Margin="0,0,1168,668"/>
+        <Image x:Name="menuButton" Source="Images/Image13.png" Stretch="Fill" MouseMove="menuButton_MouseMove" MouseDown="menuButton_MouseDown" Margin="0,0,1168,668"/>
         <Canvas Name="menu2" Margin="0,54,986,0" Background="White" MouseLeave="menu2_MouseLeave" Visibility="Hidden">
             <Button Content="LogOut" Height="70"  FontSize="36" Canvas.Top="505" Width="252"/>
             <Button Name="Home" Content="Home" Height="70"   FontSize="36" Canvas.Top="28" Width="252" Click="Home_Click"/>

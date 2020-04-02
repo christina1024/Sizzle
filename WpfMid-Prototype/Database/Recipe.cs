@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfMid_Prototype
+namespace WpfMid_Prototype.Database
 {
     class Recipe
     {

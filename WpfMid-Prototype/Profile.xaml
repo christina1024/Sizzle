@@ -12,7 +12,7 @@
 
 
             <Label Content="John Andraw" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="auto" FontSize="36" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="220"/>
-            <Image Source="Image37.png" Stretch="Fill" Height="176" Width="184"/>
+            <Image Source="Images/Image37.png" Stretch="Fill" Height="176" Width="184"/>
             <Label Content="Bio:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="24" Canvas.Left="220" Canvas.Top="80"/>
             <Label Content="Love vegan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="333" FontSize="24" Height="96" Canvas.Left="285" Canvas.Top="80"/>
 
@@ -27,12 +27,12 @@
                 </StackPanel>
                 <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
-                        <Image x:Name="image3" Source="Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
+                        <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
                         <StackPanel Margin="0,0,0,0" Height="139">
                             <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
                                 <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
-                                <Image Margin="0,18,0,100" Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (3).jpg" Stretch="Fill" Width="97"/>
+                                <Image Margin="0,18,0,100" Source="Images/4 Stars.jpg" Stretch="Fill" Width="97"/>
                                 <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="200" Margin="100,10,0,0"/>
                             </StackPanel>
                         </StackPanel>
@@ -40,12 +40,12 @@
                 </Border>
                 <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
-                        <Image x:Name="image4" Source="Image39.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
+                        <Image x:Name="image4" Source="Images/Image39.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
                         <StackPanel Margin="0,0,0,0" Height="139">
                             <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
                                 <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
-                                <Image Margin="0,18,0,100" Source="5-star-rating-icon-isolated-badge-collection-vector-24070448 (2).jpg" Stretch="Fill" Width="97"/>
+                                <Image Margin="0,18,0,100" Source="Images/5 Stars.jpg" Stretch="Fill" Width="97"/>
                                 <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="200" Margin="100,10,0,0"/>
                             </StackPanel>
                         </StackPanel>
