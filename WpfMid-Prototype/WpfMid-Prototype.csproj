@@ -304,12 +304,23 @@
   <ItemGroup>
     <Resource Include="Images\Image39.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\4 stars.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Image_Quit.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Image_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\5 Stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Image361.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
