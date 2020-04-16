@@ -30,5 +30,20 @@ namespace WpfMid_Prototype
 
         }
 
+        private void popular_Click(object sender, RoutedEventArgs e)
+        {
+            
+              
+        }
+
+        private void veggieTaco_MouseEnter(object sender, MouseEventArgs e)
+        {
+            veggieTaco.Background = new SolidColorBrush(Color.FromRgb(210,236,235));
+        }
+
+        private void veggieTaco_MouseLeave(object sender, MouseEventArgs e)
+        {
+            veggieTaco.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
     }
 }

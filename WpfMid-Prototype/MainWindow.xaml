@@ -10,13 +10,15 @@
 
         <Frame x:Name="StartMain" NavigationUIVisibility="Hidden"></Frame>
         <Image x:Name="menuButton" Source="Images/Image13.png" Stretch="Fill" MouseMove="menuButton_MouseMove" MouseDown="menuButton_MouseDown" Margin="0,0,1168,656"/>
-        <Canvas Name="menu2" Margin="0,65,1007,0" Background="#FFAFD6D2" MouseLeave="menu2_MouseLeave" Visibility="Hidden">
-            <Button Content="LOGOUT              " Height="88"  FontSize="30" Canvas.Top="455" Width="255" Background="{x:Null}" BorderBrush="Black"/>
-            <Button Name="Home" Content="HOME                  " Height="88"   FontSize="30" Width="256" Click="Home_Click" Background="{x:Null}" BorderBrush="#FF3C4649" Canvas.Top="4"/>
-            <Button Name="AdvanceSearch" Content="ADVANCE SEARCH" Height="88" FontSize="30" Canvas.Top="95" Width="254" RenderTransformOrigin="0.53,-0.357" Click="AdvanceSearch_Click" Background="{x:Null}" Foreground="Black" BorderBrush="Black" Canvas.Left="1"/>
-            <Button Name="upload" Content="UPLOAD RECIPE   " Height="88" FontSize="30" RenderTransformOrigin="0.589,3.316" Canvas.Top="185" Width="256" Click="upload_Click" Background="{x:Null}" BorderBrush="Black"/>
-            <Button Name="Profile" Content="PROFILE               " Height="88" FontSize="30" Canvas.Top="365" Width="253" Click="Profile_Click" Background="{x:Null}" BorderBrush="Black" Canvas.Left="2"/>
-            <Button Name="ShoppintList" Content="SHOPPING LIST   " Height="88" FontSize="30" Canvas.Top="275" Width="254" Click="ShoppintList_Click" Background="{x:Null}" BorderBrush="Black" Canvas.Left="1"/>
+        <Canvas Name="menu2" Margin="0,10,1007,0" Background="#FFAFD6D2" MouseLeave="menu2_MouseLeave" Opacity="0.95" Visibility="Hidden">
+            <Image  Source="Images/Image_Quit2.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="47" Canvas.Left="210" Width="44" MouseDown="Image_MouseDown"/>
+            <Canvas Height="711" Width="45" Background="Black"></Canvas>
+            <Button Content="LOGOUT               " Height="88"  FontSize="24" Canvas.Top="482" Width="210" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="45"/>
+            <Button Name="Home" Content="HOME                   " Height="88"   FontSize="24" Width="211" Click="Home_Click" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="44" Canvas.Top="37"/>
+            <Button Name="AdvanceSearch" Content=" ADVANCE SEARCH" Height="88" FontSize="24" Canvas.Top="125" Width="210" RenderTransformOrigin="0.53,-0.357" Click="AdvanceSearch_Click" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" Canvas.Left="44"/>
+            <Button Name="upload" Content="UPLOAD RECIPE    " Height="88" FontSize="24" RenderTransformOrigin="0.589,3.316" Canvas.Top="213" Width="211" Click="upload_Click" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="45"/>
+            <Button Name="Profile" Content="PROFILE                " Height="88" FontSize="24" Canvas.Top="394" Width="210" Click="Profile_Click" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="46"/>
+            <Button Name="ShoppintList" Content="SHOPPING LIST    " Height="88" FontSize="24" Canvas.Top="306" Width="210" Click="ShoppintList_Click" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="46"/>
         </Canvas>
 
     </Grid>

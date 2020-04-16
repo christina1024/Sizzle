@@ -72,5 +72,10 @@ namespace WpfMid_Prototype
         {
             StartMain.Content = new Profile();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            menu2.Visibility = System.Windows.Visibility.Hidden;
+        }
     }
 }

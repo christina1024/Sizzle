@@ -9,55 +9,63 @@
       Title="HomePage">
 
     <Grid RenderTransformOrigin="0.471,0.055" Margin="0,0,0,-2">
-        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#FFCEE4E1">
+        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#FF23B9A5">
 
 
         </Canvas>
 
-        <ScrollViewer Foreground="Black" Margin="2,143,0,0" Background="#FFFFFBDC">
+        <ScrollViewer Foreground="Black" Margin="2,143,0,0" Background="#FFF9F8F1">
 
             <StackPanel>
-                <StackPanel Orientation="Horizontal" Height="75" >
-                    <Button Content="Right Now" HorizontalAlignment="Left" Margin="90,22,0,0" VerticalAlignment="Top" Width="136" FontSize="20" FontFamily="Verdana" RenderTransformOrigin="0.704,0.285" Height="35" Background="#FFAFC9C8" BorderBrush="White"/>
+                <StackPanel Orientation="Horizontal" Height="75" Width="1259" >
+                    <Button Content="Right Now" HorizontalAlignment="Left" Margin="70,22,0,0" VerticalAlignment="Top" Width="156" FontSize="24" FontFamily="Verdana" RenderTransformOrigin="0.704,0.285" Height="43" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold"/>
                     <Label Content="-Click for more options" Margin="0,38,0,10"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Width="1065" Height="268" Background="#FFECE9D2" >
+                <StackPanel x:Name="rightNowPanel" Orientation="Horizontal" Width="1131" Height="268" >
 
-                    <StackPanel Name="porkBelly" Orientation="Vertical" Width="212" Background="#FF5EB3C5">
-                        <Image x:Name="image1" Height="172" Source="Images/Image5.png" Stretch="Fill" Width="166" Margin="23,0"/>
+                    <StackPanel Name="porkBelly" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                        <Image x:Name="image1" Height="177" Source="Images/Image5.png" Stretch="Fill" Margin="0,0,3,0"/>
                         <Label Content="Pork Belly" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label  Content="1010" FontSize="12" Height="23" Margin="135,-20,32,0"/>
                         <Label Content="Pork belly is all the rage in " Height="55" Margin="23,0"/>
                     </StackPanel>
 
-                    <StackPanel Name="pasta" Orientation="Vertical" Width="212">
-                        <Image x:Name="image2"  Height="168" Source="Images/Image6.png" Stretch="Fill" Width="183" Margin="14,0"/>
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Name="pasta" Orientation="Vertical" Width="203" Background="#FFECE9D2">
+                        <Image x:Name="image2"  Height="178" Source="Images/Image6.png" Stretch="Fill" Margin="0,0,1,0"/>
                         <Label Content="Pasta" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
                         <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0" />
                         <Label  Content="985" FontSize="12" Height="23" Margin="125,-20,32,0"/>
                         <Label Content="The rich and elegant taste of " Height="55" Margin="23,0"/>
                     </StackPanel>
 
-                    <StackPanel Name="veggieTaco" Orientation="Vertical" Width="212" Background="#FF5EB3C5">
-                        <Image x:Name="image3"  Height="166" Source="Images/Image7.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Name="veggieTaco" Orientation="Vertical" Width="205" Background="#FFECE9D2" MouseEnter="veggieTaco_MouseEnter" MouseLeave="veggieTaco_MouseLeave">
+                        <Image x:Name="image3"  Height="176" Source="Images/Image7.png" Stretch="Fill"/>
                         <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="2054"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
                         <Label Content="The best and refresh skack in " Height="55" Margin="23,0"/>
                     </StackPanel>
 
-                    <StackPanel Name="burger" Orientation="Vertical" Width="212">
-                        <Image x:Name="image4"  Height="165" Source="Images/Image8.png" Stretch="Fill" Width="183"/>
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Name="burger" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                        <Image x:Name="image4"  Height="175" Source="Images/Image8.png" Stretch="Fill"/>
                         <Label Content="Burger" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" FontSize="18" Margin="73,0,0,0"/>
                         <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="743" FontSize="12" Height="23" Margin="125,-20,32,0"/>
                         <Label Content="The best Homemade recipe in " Height="55" Margin="23,0"/>
                     </StackPanel>
 
-                    <StackPanel Name="milkTea" Orientation="Vertical" Width="212" Background="#FF5EB3C5">
-                        <Image x:Name="image5"  Height="161" Source="Images/Image10.png" Stretch="Fill" Width="184"/>
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Name="milkTea" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                        <Image x:Name="image5"  Height="175" Source="Images/Image10.png" Stretch="Fill"/>
                         <Label Content="Milk Tea " HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="18" Margin="70,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label Content="685" FontSize="12" Height="23" Margin="125,-20,32,0"/>
@@ -66,79 +74,105 @@
 
                 </StackPanel>
                 <StackPanel Height="23"></StackPanel>
-                <StackPanel Orientation="Horizontal" Height="65" RenderTransformOrigin="0.496,0.451">
-                    <Label Content="Category" HorizontalAlignment="Left" Margin="100,20,0,0" VerticalAlignment="Top" Width="129" FontSize="20" FontFamily="Verdana" RenderTransformOrigin="0.704,0.285" Height="34" Background="#FFA6BDBF"/>
+                <StackPanel Orientation="Horizontal" Height="75" RenderTransformOrigin="0.496,0.451">
+                    <Label Content="Category" HorizontalAlignment="Left" Margin="70,20,0,0" VerticalAlignment="Top" Width="129" FontSize="24" FontFamily="Verdana" RenderTransformOrigin="0.704,0.285" Height="45" Background="{x:Null}" FontWeight="Bold"/>
                     <Label Content="-Click for more options" Margin="0,35,0,0"/>
                 </StackPanel>
 
 
-                <StackPanel Orientation="Horizontal" Width="1073" Background="#FFECE9D2" Height="238">
-                    <StackPanel Orientation="Vertical" Width="214" Background="#FF5EB3C5">
-                        <Image x:Name="image21" Height="178" Source="Images/Image24.png" Stretch="Fill" Width="182"/>
+                <StackPanel x:Name="categoryPanel1" Orientation="Horizontal" Width="1109" Height="225">
+
+                    <StackPanel Orientation="Vertical" Width="204" Background="#FFCDDEDA">
+                        <Image x:Name="image21" Height="188" Source="Images/Image24.png" Stretch="Fill"/>
                         <Label Content="Pastry" FontSize="20"  Height="40" Width="68"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Width="212">
-                        <Image x:Name="image22" Height="170" Source="Images/Image26.png" Stretch="Fill" Width="175"/>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Width="205" Background="#FFCDDEDA">
+                        <Image x:Name="image22" Height="187" Source="Images/Image26.png" Stretch="Fill" Margin="0,0,-1,0"/>
                         <Label Content="Beef" FontSize="20"  Height="40" Margin="76,0,-1,0"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Width="210" Background="#FF5EB3C5">
-                        <Image x:Name="image23" Height="165" Source="Images/Image27.png" Stretch="Fill" Width="176"/>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Width="205" Background="#FFCDDEDA">
+                        <Image x:Name="image23" Height="187" Source="Images/Image27.png" Stretch="Fill"/>
                         <Label Content="Pork" FontSize="20"  Height="40" Margin="80,0,-13,0"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Width="214">
-                        <Image x:Name="image24" Height="170"  Source="Images/Image28.png" Stretch="Fill" Width="178"/>
-                        <Label Content="Poultry" FontSize="20"  Height="40" Margin="84,0,-5,0"/>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Width="205" Background="#FFCDDEDA">
+                        <Image x:Name="image24" Height="189"  Source="Images/Image28.png" Stretch="Fill"/>
+                        <Label Content="Poultry" FontSize="20"  Height="40" Margin="70,0,-5,0"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Width="204" Background="#FF5EB3C5">
-                        <Image x:Name="image25" Height="170" Source="Images/Image29.png" Stretch="Fill" Width="177"/>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Width="205" Background="#FFCDDEDA">
+                        <Image x:Name="image25" Height="189" Source="Images/Image29.png" Stretch="Fill"/>
                         <Label Content="Seafood" FontSize="20" Height="40" Width="87"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="30" Width="1071">
-                    <Image x:Name="image31" Height="172" Source="Images/Image30.png" Stretch="Fill" Width="183"/>
-                    <Label Width="42"></Label>
-                    <Image x:Name="image32" Height="172" Source="Images/Image31.png" Stretch="Fill" Width="179"/>
-                    <Label Width="42"></Label>
-                    <Image x:Name="image33" Height="172" Source="Images/Image32.png" Stretch="Fill" Width="173"/>
+
+                <StackPanel x:Name="categoryPanel2" Orientation="Horizontal" Margin="30" Width="1102" Height="226">
+
+                    <StackPanel Orientation="Vertical" Background="#FFCDDEDA" Width="201">
+                        <Image x:Name="image31" Height="182" Source="Images/Image30.png" Stretch="Fill"/>
+                        <Label Content="Vegetable" FontSize="20"  Height="39" Margin="58,0,-19,0"/>
+                    </StackPanel>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Background="#FFCDDEDA" Width="203">
+                        <Image x:Name="image32" Height="184" Source="Images/Image31.png" Stretch="Fill"/>
+                        <Label Content="Drinks" FontSize="20" Height="39" Margin="68,0,-20,0"/>
+                    </StackPanel>
+
+                    <StackPanel Width="18"></StackPanel>
+
+                    <StackPanel Orientation="Vertical" Background="#FFCDDEDA" Width="205">
+                        <Image x:Name="image33" Height="184" Source="Images/Image32.png" Stretch="Fill"/>
+                        <Label Content="Others" FontSize="20"  Height="39" Width="79"/>
+                    </StackPanel>
+
+
+
+
+
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Width="1067">
-                    <Label Content="Vegetable" FontSize="20"  Height="39" Width="220"/>
-                    <Label Content="Drinks" FontSize="20" Height="39" Width="223"/>
-                    <Label Content="Others" FontSize="20"  Height="39" Width="79"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Width="1117" Height="79">
-                    <Label Content="Popular" FontSize="24" Height="51" Width="111" Background="#FFF9F9F9" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" Margin="0,14"/>
+                <StackPanel x:Name="popularP" Orientation="Horizontal" Width="1011" Height="79">
+                    <Button Content="Popular" FontSize="24" Height="51" Width="111" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" Margin="0,14" BorderBrush="{x:Null}" FontWeight="Bold"/>
                     <Label Content="-Click for more options" Margin="0,35,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Height="260" Width="1083">
-                    <StackPanel Orientation="Vertical" Width="232" Margin="0,0,0,-30">
-                        <Image  Height="172" Source="Images/Image5.png" Stretch="Fill" Width="166"/>
+                    <StackPanel Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                        <Image Height="177" Source="Images/Image5.png" Stretch="Fill" Margin="0,0,3,0"/>
                         <Label Content="Pork Belly" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                         <Label  Content="1010" FontSize="12" Height="23" Margin="135,-20,32,0"/>
                         <Label Content="Pork belly is all the rage in " Height="55" Margin="23,0"/>
                     </StackPanel>
                 </StackPanel>
-
-                <Label Content="Following" FontSize="24" Margin="-1830,80,-900,0" Height="51" Width="131" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana"/>
-                <Label Content="Saved Recipes" FontSize="24" Margin="-1770,80,-900,0" Height="51" Width="189" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana"/>
+                <Button Content="Following" FontSize="24" Margin="-1830,80,-900,0" Height="51" Width="131" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
+                <Button Content="Saved Recipes" FontSize="24" Margin="-1770,80,-900,0" Height="51" Width="189" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
 
 
             </StackPanel>
         </ScrollViewer>
 
         <Canvas >
-            <Canvas Height="48" Width="1280" Canvas.Top="87" Background="#FF5A8D88"></Canvas>
-            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="453" Canvas.Top="35"/>
-            <Button Name="rightNow" Content="Right Now" HorizontalAlignment="Left" Margin="276,89,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="#FFE8E8E8" FontSize="22"/>
-            <Button Name="category" Content="Category" HorizontalAlignment="Left" Margin="424,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="#FFF7F5EF" FontSize="22"/>
-            <Button Name="popular" Content="Popular" HorizontalAlignment="Left" Margin="570,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="#FFF0EBDF" FontSize="22"/>
-            <Button Name="following" Content="Following" HorizontalAlignment="Left" Margin="716,87,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="#FFF7F5EF" FontSize="22"/>
-            <Button Name="savedRecipe" Content="Saved Recipe" HorizontalAlignment="Left" Margin="860,87,0,0" VerticalAlignment="Top" Width="146" Height="46" Background="#FFF7F5EF" FontSize="22" RenderTransformOrigin="1.328,0.413"/>
-            <Label Content="Welcome John" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" FontSize="22" Canvas.Left="1106" Canvas.Top="87"/>
+            <Canvas Height="48" Width="1280" Canvas.Top="87" Background="#FF0F0F0F"></Canvas>
+            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="463" Canvas.Top="37"/>
+            <Button Name="rightNow" Content="Right Now" HorizontalAlignment="Left" Margin="276,89,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
+            <Button Name="category" Content="Category" HorizontalAlignment="Left" Margin="424,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
+            <Button Name="popular" Content="Popular" HorizontalAlignment="Left" Margin="570,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="popular_Click"/>
+            <Button Name="following" Content="Following" HorizontalAlignment="Left" Margin="716,87,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
+            <Button Name="savedRecipe" Content="Saved Recipe" HorizontalAlignment="Left" Margin="860,87,0,0" VerticalAlignment="Top" Width="146" Height="46" Background="{x:Null}" FontSize="22" RenderTransformOrigin="1.328,0.413" Foreground="White" BorderBrush="{x:Null}"/>
+            <Label Content="Welcome John" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" FontSize="22" Canvas.Left="1106" Canvas.Top="87" Foreground="#FF8EB0D8"/>
             <Image Name="search" Source="Images/Image361.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="39" Canvas.Left="411" Canvas.Top="35" Width="37"/>
             <Image Name="user" Source="Images/Image_User.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="75" Canvas.Left="1151" Canvas.Top="10" Width="71"/>
         </Canvas>
