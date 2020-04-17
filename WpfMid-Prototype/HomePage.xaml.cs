@@ -36,14 +36,74 @@ namespace WpfMid_Prototype
               
         }
 
+        
+
+        private void textB_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if(textB.Text== "Enter Keywords for Recipes") {
+                textB.Text = "";
+
+                textB.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            }
+        }
+
+        private void textB_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (textB.Text == "")
+            {
+                textB.Text = "Enter Keywords for Recipes";
+
+                textB.Foreground = new SolidColorBrush(Color.FromRgb(147, 139, 139));
+            }
+        }
+
+        private void porkBelly_MouseEnter(object sender, MouseEventArgs e)
+        {
+            porkBelly.Background = new SolidColorBrush(Color.FromRgb(211, 208, 184));
+        }
+
+        private void porkBelly_MouseLeave(object sender, MouseEventArgs e)
+        {
+            porkBelly.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
+
+        private void pasta_MouseEnter(object sender, MouseEventArgs e)
+        {
+            pasta.Background = new SolidColorBrush(Color.FromRgb(211, 208, 184));
+        }
+
+        private void pasta_MouseLeave(object sender, MouseEventArgs e)
+        {
+            pasta.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
         private void veggieTaco_MouseEnter(object sender, MouseEventArgs e)
         {
-            veggieTaco.Background = new SolidColorBrush(Color.FromRgb(210,236,235));
+            veggieTaco.Background = new SolidColorBrush(Color.FromRgb(211,208,184));
         }
 
         private void veggieTaco_MouseLeave(object sender, MouseEventArgs e)
         {
             veggieTaco.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
+
+        private void burger_MouseEnter(object sender, MouseEventArgs e)
+        {
+            burger.Background = new SolidColorBrush(Color.FromRgb(211, 208, 184));
+        }
+
+        private void burger_MouseLeave(object sender, MouseEventArgs e)
+        {
+            burger.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
+
+        private void milkTea_MouseEnter(object sender, MouseEventArgs e)
+        {
+            milkTea.Background = new SolidColorBrush(Color.FromRgb(211, 208, 184));
+        }
+
+        private void milkTea_MouseLeave(object sender, MouseEventArgs e)
+        {
+            milkTea.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
         }
     }
 }

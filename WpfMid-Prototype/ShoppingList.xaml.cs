@@ -30,6 +30,73 @@ namespace WpfMid_Prototype
 
         }
 
+       
 
+        private void textBoxNewIngredient_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (textBoxNewIngredient.Text == "Add New Ingredient")
+            {
+                textBoxNewIngredient.Text = "";
+
+                textBoxNewIngredient.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            }
+        }
+
+        private void textBoxNewIngredient_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (textBoxNewIngredient.Text == "")
+            {
+                textBoxNewIngredient.Text = "Add New Ingredient";
+
+                textBoxNewIngredient.Foreground = new SolidColorBrush(Color.FromRgb(147, 139, 139));
+            }
+        }
+
+        private void clear_Click(object sender, RoutedEventArgs e)
+        {
+            clearAllPopup.IsOpen = true;
+        }
+
+        private void deleteRecipe_Click(object sender, RoutedEventArgs e)
+        {
+            clearAllPopup.IsOpen = false;
+            ingredientsPanel.Visibility = Visibility.Hidden;
+            RecipeGrid.Visibility = Visibility.Hidden;
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void Canceldelete_Click(object sender, RoutedEventArgs e)
+        {
+            clearAllPopup.IsOpen = false;
+            recipesMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void eggb_Click(object sender, RoutedEventArgs e)
+        {
+            egg.Visibility = Visibility.Hidden;
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            savedMessage.Visibility=Visibility.Visible;
+        }
+
+        private void tomatob_Click(object sender, RoutedEventArgs e)
+        {
+            tomato.Visibility = Visibility.Hidden;
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void cucumberb_Click(object sender, RoutedEventArgs e)
+        {
+            cucumber.Visibility = Visibility.Hidden;
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            recipesMessage.Visibility = Visibility.Visible;
+        }
     }
 }

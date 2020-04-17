@@ -9,12 +9,14 @@
       Title="HomePage">
 
     <Grid RenderTransformOrigin="0.471,0.055" Margin="0,0,0,-2">
-        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#FF23B9A5">
+        
+        
+        
+        <Grid Background="#FF23B9A5"></Grid>
+        <Grid Background="#FFF9F7EB" Margin="0,143,0,0"></Grid>
 
 
-        </Canvas>
-
-        <ScrollViewer Foreground="Black" Margin="2,143,0,0" Background="#FFF9F8F1">
+        <ScrollViewer Foreground="Black" Margin="2,143,0,0" >
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Height="75" Width="1259" >
@@ -24,7 +26,7 @@
 
                 <StackPanel x:Name="rightNowPanel" Orientation="Horizontal" Width="1131" Height="268" >
 
-                    <StackPanel Name="porkBelly" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                    <StackPanel Name="porkBelly" Orientation="Vertical" Width="205" Background="#FFECE9D2" MouseEnter="porkBelly_MouseEnter" MouseLeave="porkBelly_MouseLeave">
                         <Image x:Name="image1" Height="177" Source="Images/Image5.png" Stretch="Fill" Margin="0,0,3,0"/>
                         <Label Content="Pork Belly" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
@@ -34,7 +36,7 @@
 
                     <StackPanel Width="18"></StackPanel>
 
-                    <StackPanel Name="pasta" Orientation="Vertical" Width="203" Background="#FFECE9D2">
+                    <StackPanel Name="pasta" Orientation="Vertical" Width="203" Background="#FFECE9D2" MouseEnter="pasta_MouseEnter" MouseLeave="pasta_MouseLeave">
                         <Image x:Name="image2"  Height="178" Source="Images/Image6.png" Stretch="Fill" Margin="0,0,1,0"/>
                         <Label Content="Pasta" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="141" FontSize="18" Height="32" Margin="68,0,0,0"/>
                         <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0" />
@@ -54,7 +56,7 @@
 
                     <StackPanel Width="18"></StackPanel>
 
-                    <StackPanel Name="burger" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                    <StackPanel Name="burger" Orientation="Vertical" Width="205" Background="#FFECE9D2" MouseEnter="burger_MouseEnter" MouseLeave="burger_MouseLeave">
                         <Image x:Name="image4"  Height="175" Source="Images/Image8.png" Stretch="Fill"/>
                         <Label Content="Burger" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" FontSize="18" Margin="73,0,0,0"/>
                         <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
@@ -64,7 +66,7 @@
 
                     <StackPanel Width="18"></StackPanel>
 
-                    <StackPanel Name="milkTea" Orientation="Vertical" Width="205" Background="#FFECE9D2">
+                    <StackPanel Name="milkTea" Orientation="Vertical" Width="205" Background="#FFECE9D2" MouseEnter="milkTea_MouseEnter" MouseLeave="milkTea_MouseLeave">
                         <Image x:Name="image5"  Height="175" Source="Images/Image10.png" Stretch="Fill"/>
                         <Label Content="Milk Tea " HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="18" Margin="70,0,0,0"/>
                         <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
@@ -143,8 +145,8 @@
 
                 </StackPanel>
 
-                <StackPanel x:Name="popularP" Orientation="Horizontal" Width="1011" Height="79">
-                    <Button Content="Popular" FontSize="24" Height="51" Width="111" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" Margin="0,14" BorderBrush="{x:Null}" FontWeight="Bold"/>
+                <StackPanel x:Name="popularP" Orientation="Horizontal" Width="1091" Height="79">
+                    <Button Content="Popular" FontSize="24" Height="51" Width="123" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" Margin="0,14" BorderBrush="{x:Null}" FontWeight="Bold"/>
                     <Label Content="-Click for more options" Margin="0,35,0,0"/>
                 </StackPanel>
 
@@ -157,8 +159,8 @@
                         <Label Content="Pork belly is all the rage in " Height="55" Margin="23,0"/>
                     </StackPanel>
                 </StackPanel>
-                <Button Content="Following" FontSize="24" Margin="-1830,80,-900,0" Height="51" Width="131" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
-                <Button Content="Saved Recipes" FontSize="24" Margin="-1770,80,-900,0" Height="51" Width="189" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
+                <Button Content="Following" FontSize="24" Margin="-1830,80,-900,0" Height="51" Width="151" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
+                <Button Content="Saved Recipes" FontSize="24" Margin="-1770,80,-900,0" Height="51" Width="213" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
 
 
             </StackPanel>
@@ -166,7 +168,7 @@
 
         <Canvas >
             <Canvas Height="48" Width="1280" Canvas.Top="87" Background="#FF0F0F0F"></Canvas>
-            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="463" Canvas.Top="37"/>
+            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="463" Canvas.Top="37" MouseEnter="textB_MouseEnter" Foreground="#FF938B8B" MouseLeave="textB_MouseLeave"/>
             <Button Name="rightNow" Content="Right Now" HorizontalAlignment="Left" Margin="276,89,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
             <Button Name="category" Content="Category" HorizontalAlignment="Left" Margin="424,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
             <Button Name="popular" Content="Popular" HorizontalAlignment="Left" Margin="570,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="popular_Click"/>
