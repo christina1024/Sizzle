@@ -20,14 +20,34 @@ namespace WpfMid_Prototype
     /// </summary>
     public partial class ShoppingList : Page
     {
+       
+
         public ShoppingList()
-        {
+        {          
             InitializeComponent();
         }
 
         private void addNew_Click(object sender, RoutedEventArgs e)
         {
-
+            if(textBoxNewIngredient.Text !="" && textBoxNewIngredient.Text != "Add New Ingredient")
+            {
+                StackPanel[] a = { a1, a2, a3, a4, a5, a6 };
+                Label[] t = { t1, t2, t3, t4, t5, t6 };
+                for (int i=0; i<6; i++)
+                {
+                    if(!a[i].IsVisible)
+                    {
+                        t[i].Content = textBoxNewIngredient.Text;
+                        a[i].Visibility = Visibility.Visible;
+                        errorMessage.Visibility = Visibility.Hidden;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                errorMessage.Visibility = Visibility.Visible;
+            }
         }
 
        
@@ -49,6 +69,7 @@ namespace WpfMid_Prototype
                 textBoxNewIngredient.Text = "Add New Ingredient";
 
                 textBoxNewIngredient.Foreground = new SolidColorBrush(Color.FromRgb(147, 139, 139));
+                errorMessage.Visibility = Visibility.Hidden;
             }
         }
 
@@ -71,32 +92,112 @@ namespace WpfMid_Prototype
             recipesMessage.Visibility = Visibility.Hidden;
         }
 
-        private void eggb_Click(object sender, RoutedEventArgs e)
+        private void b1_Click(object sender, RoutedEventArgs e)
         {
-            egg.Visibility = Visibility.Hidden;
+            a1.Visibility = Visibility.Hidden;
+            reorder();
             savedMessage.Visibility = Visibility.Hidden;
         }
 
         private void save_Click(object sender, RoutedEventArgs e)
-        {
+        {           
             savedMessage.Visibility=Visibility.Visible;
         }
 
-        private void tomatob_Click(object sender, RoutedEventArgs e)
+        private void reorder()
         {
-            tomato.Visibility = Visibility.Hidden;
+            StackPanel[] a = { a1, a2, a3, a4, a5, a6 };
+            Label[] t = { t1, t2, t3, t4, t5, t6 };
+
+            for (int i = 0; i < 6; i++)
+            {
+                if (!a[i].IsVisible)
+                {
+                    for (int s = i + 1; s < 6; s++)
+                    {
+                        if (a[s].IsVisible)
+                        {
+                            a[s].Visibility = Visibility.Hidden;
+                            t[i].Content = t[s].Content;
+                            a[i].Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void b2_Click(object sender, RoutedEventArgs e)
+        {
+            a2.Visibility = Visibility.Hidden;
+            reorder();
             savedMessage.Visibility = Visibility.Hidden;
         }
 
-        private void cucumberb_Click(object sender, RoutedEventArgs e)
+        private void b3_Click(object sender, RoutedEventArgs e)
         {
-            cucumber.Visibility = Visibility.Hidden;
+            a3.Visibility = Visibility.Hidden;
+            reorder();
             savedMessage.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void b4_Click(object sender, RoutedEventArgs e)
+        {
+            a4.Visibility = Visibility.Hidden;
+            reorder();
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void b5_Click(object sender, RoutedEventArgs e)
+        {
+            a5.Visibility = Visibility.Hidden;
+            reorder();
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        private void b6_Click(object sender, RoutedEventArgs e)
+        {
+            a6.Visibility = Visibility.Hidden;
+            reorder();
+            savedMessage.Visibility = Visibility.Hidden;
+        }
+
+        int buttonIndicator = 0;
+        private void chocolateButton_Click(object sender, RoutedEventArgs e)
         {
             recipesMessage.Visibility = Visibility.Visible;
+            buttonIndicator = 1;
+        }
+        private void veggieButton_Click(object sender, RoutedEventArgs e)
+        {
+            recipesMessage.Visibility = Visibility.Visible;
+            buttonIndicator = 2;
+        }
+
+        private void deleteRecipeR_Click(object sender, RoutedEventArgs e)
+        {
+            if (buttonIndicator == 1) {
+                if (t1.Content.Equals("Egg"))
+                {
+                    a1.Visibility = Visibility.Hidden;
+                    reorder();
+                    recipesMessage.Visibility = Visibility.Hidden;
+                    if (veggieTaco.IsVisible) {
+                        veggieTaco.Visibility = Visibility.Hidden;
+                        chocolate2.Content = veggieTaco2.Content; 
+                    }
+                    else
+                    {
+                        chocolate.Visibility = Visibility.Hidden;
+                    }
+                    
+                }
+            }
+            else {
+                recipesMessage.Visibility = Visibility.Hidden;
+                veggieTaco.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
