@@ -14,31 +14,40 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="73*"/>
         </Grid.ColumnDefinitions>
-        <Canvas Background="#FF23B9A5" Margin="0,0,0,606" Grid.ColumnSpan="4"></Canvas>
+        <Canvas Background="#FF23B9A5" Margin="0,0,0,587" Grid.ColumnSpan="4"></Canvas>
 
-        <Grid Background="#FF1B1B1A" Margin="0,68,0,610" Grid.ColumnSpan="4"></Grid>
-
-        <Grid x:Name="RecipeGrid" Margin="68,0,10,0">
-            
-            <StackPanel x:Name="chocolate" Orientation="Horizontal">
-                <Label x:Name="chocolate2" Content="Chocolate Cake" FontSize="20" Margin="0,185,0,462" Width="225" />
-                <Button Content="X" FontSize="20" RenderTransformOrigin="3.719,-0.5" Background="{x:Null}" BorderBrush="{x:Null}" Width="39" Margin="0,185,0,481" Click="chocolateButton_Click"/>
-            </StackPanel>
-            
-            <StackPanel x:Name="veggieTaco" Orientation="Horizontal" Margin="0,0,10,0">
-                <Label x:Name="veggieTaco2" Content="Veggie Taco" FontSize="20" Margin="0,233,0,406" Width="224" />
-                <Button  Content="X" FontSize="20" RenderTransformOrigin="0.471,-0.182" Background="{x:Null}" BorderBrush="{x:Null}" Width="39" Margin="0,233,0,434" Click="veggieButton_Click"/>
-            </StackPanel>
-
+        <Grid Background="#FF1B1B1A" Margin="2,89,0,597" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
         </Grid>
 
+        <StackPanel x:Name="RecipeGrid" Orientation="Vertical" Height="145" VerticalAlignment="Bottom" Margin="46,0,0,324"  >
 
-        <Grid Background="#FFECE9D2" Margin="10,113,40,126" Grid.Column="1" Grid.ColumnSpan="2">
+            <StackPanel x:Name="chocolate" Orientation="Horizontal">
+                <Label x:Name="chocolate2" Content="Chocolate Cake" FontSize="20"  Width="225" />
+                <Button Content="X" FontSize="20" RenderTransformOrigin="3.719,-0.5" Background="{x:Null}" BorderBrush="{x:Null}" Width="39"  Click="chocolateButton_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="veggieTaco" Orientation="Horizontal" Height="58" >
+                <Label x:Name="veggieTaco2" Content="Veggie Taco" FontSize="20"  Width="224" />
+                <Button  Content="X" FontSize="20" RenderTransformOrigin="0.471,-0.182" Background="{x:Null}" BorderBrush="{x:Null}" Width="39"  Click="veggieButton_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Grid Background="#FFECE9D2" Margin="82,149,114,109" Grid.Column="1" Grid.ColumnSpan="3">
 
             <ScrollViewer Name="ingredient_view" Margin="154,83,10,10">
-                
+
                 <StackPanel x:Name="ingredientsPanel" Height="406">
-                    
+
                     <StackPanel x:Name="a1" Orientation="Horizontal" Width="556">
                         <Label x:Name="t1" Content="Egg" FontSize="20" Width="311"/>
                         <Button x:Name="b1" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="b1_Click"/>
@@ -79,16 +88,13 @@
         </Grid>
 
 
-        <Label Content="Shopping List" HorizontalAlignment="Left" Margin="82,14,0,0" VerticalAlignment="Top" Height="80" Width="293" FontSize="36" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" Grid.Column="1"/>
-        <Label Content="Recipes:" HorizontalAlignment="Left" Margin="49,118,0,0" VerticalAlignment="Top" Height="53" Width="113" FontSize="24" RenderTransformOrigin="-1.373,0.54" FontWeight="Bold"/>
+        <Label Content="Shopping List" HorizontalAlignment="Left" Margin="43,23,0,0" VerticalAlignment="Top" Height="80" Width="414" FontSize="43" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" Grid.Column="1"/>
+        <Label Content="Recipes:" HorizontalAlignment="Left" Margin="46,165,0,0" VerticalAlignment="Top" Height="53" Width="113" FontSize="24" RenderTransformOrigin="-1.373,0.54" FontWeight="Bold"/>
 
 
-        <Button Name="clear" Content="Clear All" HorizontalAlignment="Left" Margin="160,595,0,0" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Background="#FF67B6AB" Click="clear_Click"/>
-        <Button Name="save" Content="Save" HorizontalAlignment="Left" Margin="436,595,0,0" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" RenderTransformOrigin="-0.25,-0.52" Background="#FF58AEA3" Grid.Column="1" BorderBrush="Black" Click="save_Click"/>
-        <Button Name="print" Content="Print" HorizontalAlignment="Left" Margin="9,595,0,0" VerticalAlignment="Top" Width="113" Height="36" FontSize="24" RenderTransformOrigin="1.263,0.66" Background="#FF71B6AD" Foreground="Black" BorderBrush="Black" Grid.Column="2" Grid.ColumnSpan="2"/>
-
-
-        <Grid Grid.ColumnSpan="2" Margin="10,14,276,242"></Grid>
+        <Button Name="clear" Content="Clear All" HorizontalAlignment="Left" Margin="153,635,0,0" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Background="#FF67B6AB" Click="clear_Click"/>
+        <Button Name="save" Content="Save" HorizontalAlignment="Left" Margin="426,635,0,0" VerticalAlignment="Top" Width="118" Height="36" FontSize="24" RenderTransformOrigin="-0.25,-0.52" Background="#FF58AEA3" Grid.Column="1" BorderBrush="Black" Click="save_Click"/>
+        <Button Name="print" Content="Print" HorizontalAlignment="Left" Margin="10,635,0,0" VerticalAlignment="Top" Width="113" Height="36" FontSize="24" RenderTransformOrigin="1.263,0.66" Background="#FF71B6AD" Foreground="Black" BorderBrush="Black" Grid.Column="2" Grid.ColumnSpan="2"/>
         <Popup PlacementTarget="{Binding ElementName=mainGrid}" Placement="center" x:Name="clearAllPopup" OpacityMask="White" Margin="414,231,163,242" Grid.ColumnSpan="2">
             <Grid Height="177" Width="469" Background="Black">
                 <Grid Background="#FF81AEA6" Margin="0,10,0,0" HorizontalAlignment="Right" Width="491"></Grid>
@@ -96,7 +102,7 @@
                 <Label Content="all recipes and ingredients" HorizontalAlignment="Left" Margin="50,76,0,0" VerticalAlignment="Top" FontSize="31" Height="103"/>
                 <Button x:Name="deleteRecipe" Content="Delete" HorizontalAlignment="Left" Margin="109,131,0,0" VerticalAlignment="Top" Width="85" Height="32" FontSize="14" Background="#FFC6E0D9" Click="deleteRecipe_Click"/>
                 <Button x:Name="Canceldelete" Content="Cancel" HorizontalAlignment="Left" Margin="282,131,0,0" VerticalAlignment="Top" Width="85" Height="32" FontSize="14" Background="#FFC6E0D9" Click="Canceldelete_Click" RenderTransformOrigin="0.376,0.969"/>
-          
+
             </Grid>
         </Popup>
         <Label x:Name="savedMessage" Content="Shopping List has been saved" HorizontalAlignment="Left" Margin="82,537,0,0" VerticalAlignment="Top" Width="282" FontSize="20" Grid.Column="1" Foreground="#FF5D3F3F" Visibility="Hidden"/>
