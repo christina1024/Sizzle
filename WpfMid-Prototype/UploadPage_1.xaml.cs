@@ -122,5 +122,95 @@ namespace WpfMid_Prototype
             }
 
         }
+
+        private void addConstraint_Click(object sender, RoutedEventArgs e)
+        {
+            cMessage1.Visibility = Visibility.Hidden;
+            cMessage2.Visibility = Visibility.Hidden;
+            StackPanel[] s = { c1, c2, c3, c4 };
+            Label[] t = { t1, t2, t3, t4 };
+            if(constraintbox.Text != "--Select Constraint--")
+            {
+                for(int i=0; i<4; i++)
+                {
+                    string temp = t[i].Content.ToString();
+                    if(constraintbox.Text == temp) 
+                    {
+                        cMessage2.Visibility = Visibility.Visible;
+                        break;
+                    }
+                }
+                if(!cMessage2.IsVisible)
+                {
+                    for(int x=0; x< 4; x++)
+                    {
+                        if (!s[x].IsVisible)
+                        {
+                            t[x].Content = constraintbox.Text;
+                            s[x].Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                cMessage1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void sordConstraint()
+        {
+            StackPanel[] s = { c1, c2, c3, c4 };
+            Label[] t = { t1, t2, t3, t4 };
+            for(int i=0; i< 4; i++)
+            {
+                if (!s[i].IsVisible)
+                {
+                    for(int n=i+1; n< 4; n++)
+                    {
+                        if (s[n].IsVisible)
+                        {
+                            s[n].Visibility = Visibility.Hidden;
+                            t[i].Content = t[n].Content;
+                            t[n].Content = "";
+                            s[i].Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void b1_Click(object sender, RoutedEventArgs e)
+        {
+            b1.Content = "";
+            c1.Visibility = Visibility.Hidden;
+            sordConstraint();
+        }
+        private void b2_Click(object sender, RoutedEventArgs e)
+        {
+            b2.Content = "";
+            c2.Visibility = Visibility.Hidden;
+            sordConstraint();
+        }
+        private void b3_Click(object sender, RoutedEventArgs e)
+        {
+            b3.Content = "";
+            c3.Visibility = Visibility.Hidden;
+            sordConstraint();
+        }
+        private void b4_Click(object sender, RoutedEventArgs e)
+        {
+            b4.Content = "";
+            c4.Visibility = Visibility.Hidden;
+            sordConstraint();
+        }
+
+        private void next_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_2.xaml", UriKind.RelativeOrAbsolute));
+            
+        }
     }
 }

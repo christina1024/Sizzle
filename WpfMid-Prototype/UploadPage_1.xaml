@@ -9,7 +9,7 @@
       Title="UploadPage_1">
 
     <Grid RenderTransformOrigin="0.471,0.055">
-        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#FF23B9A5">
+        <Canvas HorizontalAlignment="Left" Width="1280" Background="#FF23B9A5" Margin="0,10,0,0">
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
                 <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
@@ -25,7 +25,7 @@
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
-            <Canvas  Background="#FFF9F7EB" Width="1280" Height="624">
+            <Canvas  Background="#FFF9F7EB" Width="1280" Height="633">
                 <Image Height="150" Source="Images/Image7.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67"/>
                 <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="150" Height="150" Canvas.Left="122" Canvas.Top="67"/>
 
@@ -36,8 +36,8 @@
                 <Label Content="Cook Time: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="204"/>
                 <Label Content="Portion: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="257"/>
                 <Label Content="Constraint: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="310"/>
-                <Label Content="Note: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="363"/>
-                <TextBox HorizontalAlignment="Left" Height="138" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="368" FontSize="16" Canvas.Left="728" Canvas.Top="363" Background="White"/>
+                <Label Content="Note: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="403"/>
+                <TextBox HorizontalAlignment="Left" Height="98" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="368" FontSize="16" Canvas.Left="728" Canvas.Top="403" Background="White"/>
                 <ComboBox x:Name="cookTime" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="132" Height="29" Canvas.Left="728" Canvas.Top="204" Text="--Select Time--" IsEditable="True" IsReadOnly="True" FontSize="16">
                     <ComboBoxItem Content="20"></ComboBoxItem>
                     <ComboBoxItem Content="40"></ComboBoxItem>
@@ -45,7 +45,7 @@
                     <ComboBoxItem Content="80"></ComboBoxItem>
                     <ComboBoxItem Content="100"></ComboBoxItem>
                     <ComboBoxItem Content="120"></ComboBoxItem>
-                    
+
                 </ComboBox>
                 <ComboBox x:Name="prepTime" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="132" Height="29" Canvas.Left="728" Canvas.Top="151" Text="--Select Time--" IsEditable="True" IsReadOnly="True" FontSize="16">
                     <ComboBoxItem Content="20"></ComboBoxItem>
@@ -54,16 +54,56 @@
                     <ComboBoxItem Content="80"></ComboBoxItem>
                     <ComboBoxItem Content="100"></ComboBoxItem>
                     <ComboBoxItem Content="120"></ComboBoxItem>
-                    
+
                 </ComboBox>
 
                 <TextBox x:Name="portion" Text="0" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="43" Canvas.Left="771" Canvas.Top="257" RenderTransformOrigin="0.581,1" FontSize="16"/>
 
-                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Width="132" Height="29" Canvas.Left="728" Canvas.Top="310"/>
+                <ComboBox x:Name="constraintbox" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="181" Height="29" Canvas.Left="727" Canvas.Top="312" Text="--Select Constraint--" IsEditable="True" IsReadOnly="True" FontSize="16">
+                    <ComboBoxItem Content="Vegan"></ComboBoxItem>
+                    <ComboBoxItem Content="Vegetarian"></ComboBoxItem>
+                    <ComboBoxItem Content="Dairy-Free"></ComboBoxItem>
+                    <ComboBoxItem Content="Nut-Free"></ComboBoxItem>
+                    <ComboBoxItem Content="Gluten-Free"></ComboBoxItem>
+
+                </ComboBox>
+                <Button x:Name="addConstraint" Content="Add" FontSize="16" FontFamily="Calibri" Width="48" Height="29" Canvas.Left="931" Canvas.Top="312" Click="addConstraint_Click"/>
+                <StackPanel x:Name="constraintList" Orientation="Horizontal" Height="29" Width="510" Canvas.Left="724" RenderTransformOrigin="0.5,0.5" Canvas.Top="355">
+
+                    <StackPanel x:Name="c1" Orientation="Horizontal" Width="117" Background="#FFFFFCFC" Visibility="Hidden">
+                        <Label x:Name="t1" Content="" FontSize="16" Width="86"/>
+                        <Button x:Name="b1" Content="X" Width="30" FontSize="16" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="b1_Click"/>
+                    </StackPanel>
+                    <StackPanel Width="4"></StackPanel>
+
+                    <StackPanel x:Name="c2" Orientation="Horizontal" Width="117" Background="#FFFFFCFC" Visibility="Hidden">
+                        <Label x:Name="t2" Content="" FontSize="16" Width="86"/>
+                        <Button x:Name="b2" Content="X" Width="30" FontSize="16" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="b2_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Width="4"></StackPanel>
+
+                    <StackPanel x:Name="c3" Orientation="Horizontal" Width="117" Background="#FFFFFCFC" Visibility="Hidden">
+                        <Label x:Name="t3" Content="" FontSize="16" Width="86"/>
+                        <Button x:Name="b3" Content="X" Width="30" FontSize="16" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="b3_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Width="4"></StackPanel>
+
+                    <StackPanel x:Name="c4" Orientation="Horizontal" Width="117" Background="#FFFFFCFC" Visibility="Hidden">
+                        <Label x:Name="t4" Content="" FontSize="16" Width="86"/>
+                        <Button x:Name="b4" Content="X" Width="30" FontSize="16" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="b4_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <Label x:Name="cMessage1" Content="**Please make a selection**" FontSize="14" FontFamily="Californian FB" Canvas.Left="735" Canvas.Top="334" Background="{x:Null}" Foreground="Red" Visibility="Hidden"/>
+                <Label x:Name="cMessage2" Content="**this constraint is already selected**" FontSize="14" FontFamily="Californian FB" Canvas.Left="735" Canvas.Top="334" Background="{x:Null}" Foreground="Red" Visibility="Hidden"/>
+
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="866" Canvas.Top="151"/>
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="866" Canvas.Top="204"/>
-                <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="787" Canvas.Top="520" Width="175" Height="33"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1037" Canvas.Top="520" Width="175" Height="33"/>
+                <Button x:Name="save" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="787" Canvas.Top="520" Width="175" Height="33"/>
+                <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1037" Canvas.Top="520" Width="175" Height="33" Click="next_Click"/>
                 <Image x:Name="light1" Height="47" Source="Images/1 Stars.png" Canvas.Left="728" Canvas.Top="98" Width="42" MouseEnter="stars1_MouseEnter"/>
                 <Image x:Name="light2" Height="47" Source="Images/1 Stars.png" Canvas.Left="758" Canvas.Top="98" Width="42" MouseEnter="stars2_MouseEnter"/>
                 <Image x:Name="light3" Height="47" Source="Images/1 Stars.png" Canvas.Left="788" Canvas.Top="98" Width="42" MouseEnter="stars3_MouseEnter"/>

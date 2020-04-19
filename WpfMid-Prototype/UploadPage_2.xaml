@@ -8,14 +8,14 @@
       d:DesignHeight="800" d:DesignWidth="1280"
       Title="UploadPage_1">
 
-    <Grid RenderTransformOrigin="0.471,0.055" Opacity="0.8">
-        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#e8e8e8">
+    <Grid RenderTransformOrigin="0.471,0.055">
+        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#FF23B9A5">
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
-                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="Gray"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="Black"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
             </Grid>
         </Canvas>
 
@@ -25,44 +25,111 @@
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
-            <Canvas Background="#fafafa" Width="1280">
+            <Canvas Background="#FFF9F7EB" Width="1280">
 
-                <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="830" Canvas.Top="566" Width="175" Height="33"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1041" Canvas.Top="566" Width="175" Height="33"/>
-                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="69" Canvas.Top="566" Width="175" Height="33"/>
+                <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="816" Canvas.Top="532" Width="175" Height="33"/>
+                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1042" Canvas.Top="532" Width="175" Height="33" Click="Button_Click_1"/>
+                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="79" Canvas.Top="532" Width="175" Height="33" Click="Button_Click"/>
 
-                <TextBox Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="56" Width="200" Opacity="0.5"/>
-                <TextBox Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="422" TextWrapping="Wrap" Canvas.Top="56" Width="200" Opacity="0.5"/>
-                <TextBox Text="Quanity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" Opacity="0.5"/>
-                <ComboBox Canvas.Left="910" Canvas.Top="56" Width="120" Height="29"/>
-                <TextBox Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="108" Width="200" Opacity="0.5"/>
-                <TextBox Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="422" TextWrapping="Wrap" Canvas.Top="108" Width="200" Opacity="0.5"/>
-                <TextBox Text="Quanity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="108" Width="149" Opacity="0.5"/>
-                <ComboBox Canvas.Left="910" Canvas.Top="108" Width="120" Height="29"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1065" Canvas.Top="109" Width="28"/>
-                <TextBox Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="159" Width="200" Opacity="0.5"/>
-                <TextBox Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="422" TextWrapping="Wrap" Canvas.Top="159" Width="200" Opacity="0.5"/>
-                <TextBox Text="Quanity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="159" Width="149" Opacity="0.5"/>
-                <ComboBox Canvas.Left="910" Canvas.Top="159" Width="120" Height="29"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1065" Canvas.Top="160" Width="28"/>
-                <TextBox Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="214" Width="200" Opacity="0.5"/>
-                <TextBox Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="422" TextWrapping="Wrap" Canvas.Top="214" Width="200" Opacity="0.5"/>
-                <TextBox Text="Quanity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="214" Width="149" Opacity="0.5"/>
-                <ComboBox Canvas.Left="910" Canvas.Top="214" Width="120" Height="29"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1065" Canvas.Top="215" Width="28"/>
-                <TextBox Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="56" Width="200" Opacity="0.5"/>
-                <TextBox Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="422" TextWrapping="Wrap" Canvas.Top="56" Width="200" Opacity="0.5"/>
-                <TextBox Text="Quanity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" Opacity="0.5"/>
-                <ComboBox Canvas.Left="910" Canvas.Top="56" Width="120" Height="29"/>
-                <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="296" Width="28"/>
+                <StackPanel x:Name="ingredient1" Orientation="Horizontal" Height="51" Width="841" Canvas.Left="189" Canvas.Top="54">
+                    <TextBox x:Name="i1" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" Foreground="#FF938B8B" MouseEnter="i1_MouseEnter" MouseLeave="i1_MouseLeave" />
+                    <Label Width="36"></Label>
+                    <TextBox x:Name="s1" Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black"  TextWrapping="Wrap" Width="200" Foreground="#FF938B8B" MouseEnter="s1_MouseEnter" MouseLeave="s1_MouseLeave"/>
+                    <Label Width="102"></Label>
+                    <TextBox x:Name="q1" Text="Quantity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" Foreground="#FF938B8B" MouseEnter="q1_MouseEnter" PreviewTextInput="NumberValidation" MouseLeave="q1_MouseLeave"/>
+                    <Label Width="34"></Label>
+                    <ComboBox x:Name="b1"  HorizontalContentAlignment="Center"  FontSize="16" Canvas.Left="910" Canvas.Top="56" Width="120" Height="29" Text="--Select Size--" IsEditable="True" IsReadOnly="True">
+                        <ComboBoxItem Content="Cup"></ComboBoxItem>
+                        <ComboBoxItem Content="Tablespoon"></ComboBoxItem>
+                        <ComboBoxItem Content="Teaspoon"></ComboBoxItem>
+                        <ComboBoxItem Content="ml"></ComboBoxItem>
+                        <ComboBoxItem Content="L"></ComboBoxItem>
+                        <ComboBoxItem Content="no size"></ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel x:Name="ingredient2" Orientation="Horizontal" Height="51" Width="904" Canvas.Left="189" Canvas.Top="97" IsEnabled="False">
+                    <TextBox x:Name="i2" Foreground="#FF938B8B" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200"  MouseEnter="i2_MouseEnter" MouseLeave="i2_MouseLeave"/>
+                    <Label Width="36"></Label>
+                    <TextBox x:Name="s2" Foreground="#FF938B8B" Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black"  TextWrapping="Wrap" Width="200" MouseEnter="s2_MouseEnter" MouseLeave="s2_MouseLeave"/>
+                    <Label Width="102"></Label>
+                    <TextBox x:Name="q2" Foreground="#FF938B8B" Text="Quantity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" MouseEnter="q2_MouseEnter" MouseLeave="q2_MouseLeave" PreviewTextInput="NumberValidation" />
+                    <Label Width="34"></Label>
+                    <ComboBox x:Name="b2"  HorizontalContentAlignment="Center"  FontSize="16" Canvas.Left="910" Canvas.Top="56" Width="120" Height="29" Text="--Select Size--" IsEditable="True" IsReadOnly="True" >
+                        <ComboBoxItem Content="Cup"></ComboBoxItem>
+                        <ComboBoxItem Content="Tablespoon"></ComboBoxItem>
+                        <ComboBoxItem Content="Teaspoon"></ComboBoxItem>
+                        <ComboBoxItem Content="ml"></ComboBoxItem>
+                        <ComboBoxItem Content="L"></ComboBoxItem>
+                        <ComboBoxItem Content="no size"></ComboBoxItem>
+                    </ComboBox>
+                    <Label Width="34"></Label>
+                    <Image x:Name="image2" Height="28" Source="Images/Image_Quit.png" Width="28" MouseDown="image2_MouseDown"/>
+                </StackPanel>
+
+                <StackPanel x:Name="ingredient3" Orientation="Horizontal" Height="51" Width="904" Canvas.Left="189" Canvas.Top="148" IsEnabled="False">
+                    <TextBox x:Name="i3" Foreground="#FF938B8B" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" MouseEnter="i3_MouseEnter" MouseLeave="i3_MouseLeave"/>
+                    <Label Width="36"></Label>
+                    <TextBox x:Name="s3" Foreground="#FF938B8B" Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black"  TextWrapping="Wrap" Width="200" MouseEnter="s3_MouseEnter" MouseLeave="s3_MouseLeave" />
+                    <Label Width="102"></Label>
+                    <TextBox x:Name="q3" Foreground="#FF938B8B" Text="Quantity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" MouseEnter="q3_MouseEnter" MouseLeave="q3_MouseLeave" PreviewTextInput="NumberValidation"/>
+                    <Label Width="34"></Label>
+                    <ComboBox x:Name="b3" HorizontalContentAlignment="Center"  FontSize="16" Canvas.Left="910" Canvas.Top="56" Width="120" Height="29" Text="--Select Size--" IsEditable="True" IsReadOnly="True">
+                        <ComboBoxItem Content="Cup"></ComboBoxItem>
+                        <ComboBoxItem Content="Tablespoon"></ComboBoxItem>
+                        <ComboBoxItem Content="Teaspoon"></ComboBoxItem>
+                        <ComboBoxItem Content="ml"></ComboBoxItem>
+                        <ComboBoxItem Content="L"></ComboBoxItem>
+                        <ComboBoxItem Content="no size"></ComboBoxItem>
+                    </ComboBox>
+                    <Label Width="34"></Label>
+                    <Image x:Name="image3" Height="28" Source="Images/Image_Quit.png" Width="28" MouseDown="image3_MouseDown"/>
+                </StackPanel>
+
+                <StackPanel x:Name="ingredient4" Orientation="Horizontal" Height="51" Width="904" Canvas.Left="189" Canvas.Top="203" IsEnabled="False">
+                    <TextBox x:Name="i4" Foreground="#FF938B8B" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" MouseEnter="i4_MouseEnter" MouseLeave="i4_MouseLeave" />
+                    <Label Width="36"></Label>
+                    <TextBox x:Name="s4" Foreground="#FF938B8B" Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black"  TextWrapping="Wrap" Width="200" MouseEnter="s4_MouseEnter" MouseLeave="s4_MouseLeave" />
+                    <Label Width="102"></Label>
+                    <TextBox x:Name="q4" Foreground="#FF938B8B" Text="Quantity" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="727" TextWrapping="Wrap" Canvas.Top="56" Width="149" MouseEnter="q4_MouseEnter" MouseLeave="q4_MouseLeave" PreviewTextInput="NumberValidation" />
+                    <Label Width="34"></Label>
+                    <ComboBox x:Name="b4" HorizontalContentAlignment="Center"  FontSize="16" Canvas.Left="910" Canvas.Top="56" Width="120" Height="29" Text="--Select Size--" IsEditable="True" IsReadOnly="True">
+                        <ComboBoxItem Content="Cup"></ComboBoxItem>
+                        <ComboBoxItem Content="Tablespoon"></ComboBoxItem>
+                        <ComboBoxItem Content="Teaspoon"></ComboBoxItem>
+                        <ComboBoxItem Content="ml"></ComboBoxItem>
+                        <ComboBoxItem Content="L"></ComboBoxItem>
+                        <ComboBoxItem Content="no size"></ComboBoxItem>
+                    </ComboBox>
+                    <Label Width="34"></Label>
+                    <Image x:Name="image4" Height="28" Source="Images/Image_Quit.png" Width="28" MouseDown="image4_MouseDown"/>
+                </StackPanel>
+
+                <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="296" Width="28" MouseDown="Image_MouseDown"/>
                 <Label Content="Add more ingredient" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="296"/>
-                <TextBox Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="395" Width="200" Opacity="0.5"/>
-                <TextBox Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="498" TextWrapping="Wrap" Canvas.Top="395" Width="200" Opacity="0.5"/>
-                <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="849" Canvas.Top="467" Width="28"/>
+
+                <StackPanel Orientation="Horizontal" Height="29" Width="904" Canvas.Left="189" Canvas.Top="395">
+                    <TextBox x:Name="a1" Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="395" Width="200"  Foreground="#FF938B8B" MouseEnter="a1_MouseEnter" MouseLeave="a1_MouseLeave"/>
+                    <Label Width="120"></Label>
+                    <StackPanel x:Name="appliance2" Orientation="Horizontal">
+                        <TextBox x:Name="a2" Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="498" TextWrapping="Wrap" Canvas.Top="395" Width="200" Foreground="#FF938B8B" MouseEnter="a2_MouseEnter" MouseLeave="a2_MouseLeave" />
+                        <Label Width="20"></Label>
+                        <Image Height="28" x:Name="abutton1" Source="Images/Image_Quit.png" Canvas.Left="847" Canvas.Top="470" Width="28" MouseDown="abutton1_MouseDown"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="appliance3" Orientation="Horizontal">
+                        <Label Width="80"></Label>
+                        <TextBox x:Name="a3" Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="805" TextWrapping="Wrap" Canvas.Top="395" Width="200" Foreground="#FF938B8B" MouseEnter="a3_MouseEnter" MouseLeave="a3_MouseLeave"/>
+                        <Label Width="20"></Label>
+                        <Image x:Name="abutton2" Height="28" Source="Images/Image_Quit.png" Canvas.Left="714" Canvas.Top="396" Width="28" MouseDown="abutton2_MouseDown"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+
                 <Label Content="Add more Appliances" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="467"/>
-                <TextBox Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="805" TextWrapping="Wrap" Canvas.Top="395" Width="200" Opacity="0.5"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="714" Canvas.Top="396" Width="28"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1020" Canvas.Top="396" Width="28"/>
+                <Image x:Name="addAppliance" Height="28" Source="Images/Image_Add.png" Canvas.Left="849" Canvas.Top="467" Width="28" MouseDown="addAppliance_MouseDown"/>
+                
 
 
             </Canvas>
