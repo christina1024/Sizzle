@@ -106,7 +106,7 @@
                 </StackPanel>
 
                 <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="296" Width="28" MouseDown="Image_MouseDown"/>
-                <Label Content="Add more ingredient" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="296"/>
+                <Label Content="Add more ingredients" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="296"/>
 
                 <StackPanel Orientation="Horizontal" Height="29" Width="904" Canvas.Left="189" Canvas.Top="395">
                     <TextBox x:Name="a1" Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="395" Width="200"  Foreground="#FF938B8B" MouseEnter="a1_MouseEnter" MouseLeave="a1_MouseLeave"/>
