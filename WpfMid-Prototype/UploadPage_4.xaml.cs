@@ -25,6 +25,39 @@ namespace WpfMid_Prototype
             InitializeComponent();
         }
 
+        private void Button_Publish(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewPage.xaml", UriKind.RelativeOrAbsolute));
 
+        }
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Profile.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void Button_Upload3(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_3.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void Button_Upload2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_2.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void Button_Upload1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_1.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Follow.Content = "Following";
+        }
     }
 }
