@@ -84,7 +84,7 @@
             <Image x:Name="add" Source="Images/Image_Add.png" Height="27" Canvas.Left="854" Canvas.Top="33" Width="138" MouseDown="add_MouseDown" />
             <Label Content="Add more step" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Margin="949,30,0,0" />
             <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Margin="768,108,336,89" />
-            <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Margin="1000,108,104,89"/>
+            <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Margin="1000,108,104,89" Click="next_Click"/>
             <Button x:Name="previous" Content="Previous" FontSize="20" FontFamily="Calibri"  Width="175" Height="33" Margin="118,108,986,89" Click="previous_Click" />
         </Canvas>
 

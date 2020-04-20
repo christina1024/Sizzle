@@ -126,6 +126,11 @@ namespace WpfMid_Prototype
         {
             NavigationService.Navigate(new Uri("/UploadPage_2.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void next_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_4.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 
     
