@@ -105,5 +105,11 @@ namespace WpfMid_Prototype
         {
             milkTea.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
         }
+
+        private void Button_VeggieTacos(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewPage.xaml", UriKind.RelativeOrAbsolute));
+
+        }
     }
 }
