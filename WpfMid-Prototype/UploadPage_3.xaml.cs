@@ -24,5 +24,11 @@ namespace WpfMid_Prototype
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UploadPage_4.xaml", UriKind.RelativeOrAbsolute));
+
+        }
     }
 }

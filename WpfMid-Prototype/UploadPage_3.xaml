@@ -35,7 +35,7 @@
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="1058" Canvas.Top="115"/>
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="1058" Canvas.Top="303"/>
                 <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="830" Canvas.Top="566" Width="175" Height="33"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1041" Canvas.Top="566" Width="175" Height="33"/>
+                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1041" Canvas.Top="566" Width="175" Height="33" Click="Button_Click"/>
                 <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="69" Canvas.Top="566" Width="175" Height="33"/>
                 <Label Content="1." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
                 <Label Content="2." FontSize="20" FontFamily="Californian FB" Canvas.Left="102" Canvas.Top="261"/>
