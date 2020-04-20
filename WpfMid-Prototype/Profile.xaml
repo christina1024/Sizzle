@@ -8,51 +8,63 @@
       d:DesignHeight="700" d:DesignWidth="1280"
       Title="Profile">
     <Grid>
-        <Canvas Margin="362,46,300,478">
+        <Canvas HorizontalAlignment="Left" Width="1280" Background="#FF23B9A5" Margin="0,0,0,0" Cursor="">
+            <Label Content="Following" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" FontSize="18" Margin="760,116,0,0" RenderTransformOrigin="2.263,-3.401"/>
+            <Label Content="Follower" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" FontSize="18" Margin="760,56,0,0"/>
+            <Label Content="Rating" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="760,174,0,0"/>
+            <Image Source="Images/4 Stars.png" Stretch="Fill" Canvas.Left="880" Canvas.Top="174" Height="36" Width="150" RenderTransformOrigin="-0.419,1.013"/>
+            <Label Content="1231" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" FontSize="18" Margin="880,56,0,0"/>
+            <Label Content="13" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="880,116,0,0" RenderTransformOrigin="-0.045,0.441"/>
+            <Button x:Name="fo" Content="Follow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" FontSize="18" Click="Button_Click" RenderTransformOrigin="0.945,0.557" Canvas.Left="1086" Canvas.Top="59" Background="#FFF9F7EB"/>
+        </Canvas>
+        <Canvas Margin="100,46,657,478">
 
 
             <Label Content="John Andraw" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="auto" FontSize="36" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="220"/>
             <Image Source="Images/Image37.png" Stretch="Fill" Height="176" Width="184"/>
             <Label Content="Bio:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="24" Canvas.Left="220" Canvas.Top="80"/>
-            <Label Content="Love vegan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="333" FontSize="24" Height="96" Canvas.Left="285" Canvas.Top="80"/>
+            <Label Content="Chef of a Taco restaurant at&#xD;&#xA;Calgary&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="333" FontSize="24" Height="96" Canvas.Left="285" Canvas.Top="80"/>
 
         </Canvas>
-        <Label Content="Following: 141" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" FontSize="18" Margin="362,246,0,0"/>
-        <Label Content="Follower: 1231" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" FontSize="18" Margin="573,246,0,0"/>
-        <Border BorderThickness="2" BorderBrush="Black" Margin="100,280,100,100" >
-            <StackPanel HorizontalAlignment="Left" Height="auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto">
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                    <Button Content="Posted Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="36" FontSize="24" Margin="0,0,0,0"/>
-                    <Button Content="Saved Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="36" FontSize="24" Margin="0,0,0,0"/>
+        <Canvas  Background="#FFF9F7EB" Width="1280" Height="800" Margin="0,250,0,0">
+            <Border BorderThickness="2" BorderBrush="Black" Margin="100,50,100,100" >
+                <StackPanel HorizontalAlignment="Left" Height="auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <Button Content="Posted Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="36" FontSize="24" Margin="0,0,0,0" Background="#FF23B9A5" BorderBrush="Black"/>
+                        <Button Content="Saved Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="36" FontSize="24" Margin="0,0,0,0" Background="#FF23B9A5" BorderBrush="Black"/>
+                    </StackPanel>
+                    <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
+                            <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
+                            <StackPanel Margin="0,0,0,0" Height="139">
+                                <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
+                                    <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
+                                    <Image Margin="0,18,0,100" Source="Images/4 Stars.png" Stretch="Fill" Width="97"/>
+                                    <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="140" Margin="50,10,0,0"/>
+                                    <Label Content="Instruction: This person is lazy." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="380" Margin="50,10,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
+                            <Image x:Name="image4" Source="Images/Image39.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
+                            <StackPanel Margin="0,0,0,0" Height="139">
+                                <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
+                                    <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
+                                    <Image Margin="0,18,0,100" Source="Images/5 Stars.png" Stretch="Fill" Width="97"/>
+                                    <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="140" Margin="50,10,0,0"/>
+                                    <Label Content="Instruction: This one is spicy." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="380" Margin="50,10,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
-                <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
-                        <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
-                        <StackPanel Margin="0,0,0,0" Height="139">
-                            <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
-                                <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
-                                <Image Margin="0,18,0,100" Source="Images/4 Stars.jpg" Stretch="Fill" Width="97"/>
-                                <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="200" Margin="100,10,0,0"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </StackPanel>
-                </Border>
-                <Border BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
-                        <Image x:Name="image4" Source="Images/Image39.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
-                        <StackPanel Margin="0,0,0,0" Height="139">
-                            <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="120" Margin="10,10,0,0"/>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139" Width="851">
-                                <Label Content="Stars: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="10,10,0,0"/>
-                                <Image Margin="0,18,0,100" Source="Images/5 Stars.jpg" Stretch="Fill" Width="97"/>
-                                <Label Content="Shares: 1000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="200" Margin="100,10,0,0"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-        </Border>
+            </Border>
+        </Canvas>
+
 
     </Grid>
 

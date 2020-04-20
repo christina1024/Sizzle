@@ -25,5 +25,17 @@ namespace WpfMid_Prototype
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string focontent = (e.Source as Button).Content.ToString();
+            if (focontent == "Follow")
+            {
+                fo.Content = "Followed";
+            }
+            else
+            {
+                fo.Content = "Follow";
+            }
+        }
     }
 }

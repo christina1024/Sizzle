@@ -8,65 +8,83 @@
       d:DesignHeight="700" d:DesignWidth="1280"
       Title="Search">
     <Grid>
+        <Canvas HorizontalAlignment="Left" Width="1280" Background="#FF23B9A5" Margin="0,0,0,0" Cursor="">
+            <Label Content="Advanced Search" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Height="80" Width="auto" FontSize="30" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Result" HorizontalAlignment="Left" Margin="800,0,0,0" VerticalAlignment="Top" Height="80" Width="auto" FontSize="30" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Canvas>
+
+        <Canvas  Background="#FFF9F7EB" Width="1280" Height="620" Margin="0,80,0,0">
+            <StackPanel HorizontalAlignment="Left" Height="800" Margin="0,-90,0,0" VerticalAlignment="Top" Width="500">
+                <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBox x:Name="sb" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" FontSize="20" Width="300" MouseEnter="sb_MouseEnter" Foreground="#FF938B8B" MouseLeave="sb_MouseLeave" Margin="100,100,0,0" TextChanged="sb_TextChanged"/>
+                    <Image x:Name="search" Source="Images/Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="38" Width="37" Margin="0,100,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonDown="search_MouseLeftButtonDown"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
+                    <Button Content="With" FontSize="20" Margin="25,0,0,0" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="37" Background="#FF23B9A5" Click="Button_Click_4"/>
+                    <TextBox x:Name="ac" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Add Craving" VerticalAlignment="Top" Background="#FFFDFDFD" FontSize="20" Width="180" MouseEnter="ac_MouseEnter" Foreground="#FF938B8B" MouseLeave="ac_MouseLeave" Margin="10,0"/>
+                    <Button Content="Without" FontSize="20" Margin="0,0,380,0" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="37" Background="#FF23B9A5" Click="Button_Click_5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <ScrollViewer Name="with" Margin="10,0,0,0" Width="240" Height="230" Background="#FFECE9D2">
+                        <StackPanel>
+                            <Label Content="Included Ingredient" FontSize="20" BorderThickness="1" Background="#FF23B9A5"/>
+                            <StackPanel x:Name="ii1" Orientation="Horizontal">
+                                <Label x:Name="ii1l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ii1b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click_1"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ii2" Orientation="Horizontal">
+                                <Label x:Name="ii2l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ii2b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"/>
+                            </StackPanel>
+
+                        </StackPanel>
 
 
-        <Label Content="Advanced Search" HorizontalAlignment="Left" Margin="104,0,0,0" VerticalAlignment="Top" Height="80" Width="auto" FontSize="36" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="Result" HorizontalAlignment="Left" Margin="842,0,0,0" VerticalAlignment="Top" Height="80" Width="auto" FontSize="36" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <StackPanel HorizontalAlignment="Left" Height="608" Margin="0,92,0,0" VerticalAlignment="Top" Width="500">
-            <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBox HorizontalAlignment="Center" Height="37" TextWrapping="Wrap" Text="Veggie Taco" VerticalAlignment="Center" FontSize="20" Width="300" TextChanged="TextBox_TextChanged" Margin="100,0,0,0"/>
-                <Image x:Name="search" Source="Images/Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="38" Width="37" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-                <Label Content="With" FontSize="20" Margin="25,0,0,0" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="37"/>
-                <TextBox HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Add Craving" VerticalAlignment="Top" FontSize="20" Width="200" TextChanged="TextBox_TextChanged"/>
-                <Label Content="Without" FontSize="20" Margin="0,0,380,0" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="37"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <ScrollViewer Name="with" Margin="0" Width="250" Height="230">
-                    <StackPanel>
-                        <Label Content="Included Ingredient" FontSize="20"></Label>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Carrot" FontSize="20" Width="200"/>
-                            <Button Content="X" Width="30" FontSize="20" Height="30"/>
+                    </ScrollViewer>
+                    <ScrollViewer Name="without" Margin="0" Width="240" Height="230" Background="#FFECE9D2">
+                        <StackPanel>
+                            <Label Content="Excluded Ingredient" FontSize="20" BorderThickness="1" Background="#FF23B9A5"/>
+                            <StackPanel x:Name="ei1" Orientation="Horizontal">
+                                <Label x:Name="ei1l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ei1b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_2"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ei2" Orientation="Horizontal">
+                                <Label x:Name="ei2l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ei2b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_3"/>
+                            </StackPanel>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Egg" FontSize="20" Width="200"/>
-                            <Button Content="X" Width="30" FontSize="20" Height="30"/>
-                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+                <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="0,10,0,0">
+                    <Label Content="Dietary Constraints" FontSize="20" Margin="0,0,0,0"/>
+                    <StackPanel x:Name="dietary" Orientation="Horizontal">
+                        <CheckBox x:Name="cb1" Content="Vegan" Width="110">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+                        <CheckBox x:Name="cb2" Content="Dairy-Free" Margin="6,0,0,0" Width="110">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+                        <CheckBox x:Name="cb3" Content="Nut-Free">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+
 
                     </StackPanel>
-
-
-                </ScrollViewer>
-                <ScrollViewer Name="without" Margin="0" Width="250" Height="230">
-                    <StackPanel>
-                        <Label Content="Excluded Ingredient" FontSize="20"></Label>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Pork" FontSize="20" Width="200"/>
-                            <Button Content="X" Width="30" FontSize="20" Height="30"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Beef" FontSize="20" Width="200"/>
-                            <Button Content="X" Width="30" FontSize="20" Height="30"/>
-                        </StackPanel>
-                    </StackPanel>
-                </ScrollViewer>
-            </StackPanel>
-            <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="0,10,0,0">
-                <Label Content="Dietary Constraints" FontSize="20" Margin="0,0,0,0"/>
-                <StackPanel Name="dietary" Orientation="Horizontal">
-                    <CheckBox Content="Vegan" Width="110">
+                </StackPanel>
+                <StackPanel x:Name="dietary_Copy" Orientation="Horizontal">
+                    <CheckBox x:Name="cb4" Content="Vegetarian" Width="110" Checked="CheckBox_Checked">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox Content="Dairy-Free" Margin="6,0,0,0" Width="110">
-                        <CheckBox.LayoutTransform>
-                            <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                        </CheckBox.LayoutTransform>
-                    </CheckBox>
-                    <CheckBox Content="Nut-Free">
+                    <CheckBox x:Name="cb5" Content="Gluten-Free" Margin="6,0,0,0" Width="110">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                         </CheckBox.LayoutTransform>
@@ -74,53 +92,50 @@
 
 
                 </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="dietary_Copy" Orientation="Horizontal">
-                <CheckBox Content="Vegetarian" Width="110">
-                    <CheckBox.LayoutTransform>
-                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                    </CheckBox.LayoutTransform>
-                </CheckBox>
-                <CheckBox Content="Gluten-Free" Margin="6,0,0,0" Width="110">
-                    <CheckBox.LayoutTransform>
-                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                    </CheckBox.LayoutTransform>
-                </CheckBox>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Expected Time" FontSize="20" Width="150"/>
+                    <Label Content="0 h" FontSize="20" Width="37"/>
+                    <Slider Maximum="3" TickPlacement="BottomRight" TickFrequency="0.5" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="1" IsSnapToTickEnabled="True" x:Name="slValue" Width="220" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" ValueChanged="slValue_ValueChanged" />
+                    <Label x:Name="time" Content="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" FontSize="20" DockPanel.Dock="Right"  Width="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label Content="h" FontSize="20" Width="32"/>
+
+                </StackPanel>
 
 
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Expected Time (Hours)" FontSize="20" Width="220"/>
-                <Slider Maximum="10" TickPlacement="BottomRight" TickFrequency="2" IsSnapToTickEnabled="True" Name="slValue" Width="220" />
-                <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" FontSize="20" DockPanel.Dock="Right" TextAlignment="Right" Width="40" TextChanged="TextBox_TextChanged_1" />
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Difficulty" FontSize="20" Width="150"/>
+                    <Image Source="Images/5 Stars.png" Stretch="Fill" Height="34" Width="192"/>
 
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Difficulty (Stars)" FontSize="20" Width="220"/>
-                <Slider Maximum="5" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="slValue2" Width="220" />
-                <TextBox Text="{Binding Value, ElementName=slValue2, UpdateSourceTrigger=PropertyChanged}" FontSize="20" DockPanel.Dock="Right" TextAlignment="Right" Width="40" TextChanged="TextBox_TextChanged_2" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                    <Button x:Name="clear" Content="Clear All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0" Click="clear_Click" Background="#FF23B9A5"/>
+                    <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0" Click="searchButton_Click" Background="#FF23B9A5"/>
+                </StackPanel>
 
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
-                <Button x:Name="clear" Content="Clear All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0"/>
-                <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0"/>
-            </StackPanel>
+            <Canvas x:Name="result" Margin="534,92,40,386" Visibility="Hidden">
+                <StackPanel Orientation="Vertical" Width="212" Height="222" >
+                    <Image Height="166" Source="Images/Image7.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                    <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
+                    <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                    <Label Content="2054"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="212" Height="222" Canvas.Left="244" >
+                    <Image Height="166" Source="Images/Image37.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                    <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
+                    <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                    <Label Content="1551"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="212" Height="222" Canvas.Left="494" >
+                    <Image Height="166" Source="Images/Image39.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                    <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
+                    <Image Source="Images/4 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                    <Label Content="1321"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
+                </StackPanel>
 
-        </StackPanel>
-        <StackPanel Margin="544,91,553,386" Orientation="Vertical">
-            <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="177"/>
-            <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="24,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
-        </StackPanel>
-        <StackPanel Margin="793,91,303,386" Orientation="Vertical">
-            <Image Source="Images/Image37.png" Stretch="Fill" Height="176"/>
-            <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
-        </StackPanel>
-        <StackPanel Margin="1043,93,54,386" Orientation="Vertical">
-            <Image Source="Images/Image39.png" Stretch="Fill" Height="175"/>
-
-            <Label Content="Veggie Taco" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" Width="121" FontSize="18"/>
-        </StackPanel>
-
+            </Canvas>
+        </Canvas>
     </Grid>
 
 </Page>
