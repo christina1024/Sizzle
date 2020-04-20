@@ -8,14 +8,14 @@
       d:DesignHeight="800" d:DesignWidth="1280"
       Title="UploadPage_1">
 
-    <Grid RenderTransformOrigin="0.471,0.055" Opacity="0.8">
-        <Canvas HorizontalAlignment="Left" Height="792" VerticalAlignment="Top" Width="1280" Background="#e8e8e8">
+    <Grid RenderTransformOrigin="0.471,0.055">
+        <Canvas HorizontalAlignment="Left" Height="790" VerticalAlignment="Top" Width="1280" Background="#FF23B9A5">
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
-                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="Gray"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="Black"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
             </Grid>
         </Canvas>
 
@@ -24,26 +24,69 @@
         <Label Content="Instructions" HorizontalAlignment="Left" Margin="706,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
-        <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
-            <Canvas Background="#fafafa" Width="1280">
-                <Image Height="130" Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Canvas.Left="170" Canvas.Top="261"/>
-                <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
-                <TextBox HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" FontSize="18" Canvas.Left="371" Canvas.Top="67"/>
-                <TextBox HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" FontSize="18" Canvas.Left="371" Canvas.Top="261"/>
-                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Width="85" Height="30" Canvas.Left="967" Canvas.Top="303"/>
-                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Width="85" Height="30" Canvas.Left="963" Canvas.Top="115"/>
-                <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="1058" Canvas.Top="115"/>
-                <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="1058" Canvas.Top="303"/>
-                <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="830" Canvas.Top="566" Width="175" Height="33"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1041" Canvas.Top="566" Width="175" Height="33"/>
-                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="69" Canvas.Top="566" Width="175" Height="33"/>
-                <Label Content="1." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
-                <Label Content="2." FontSize="20" FontFamily="Californian FB" Canvas.Left="102" Canvas.Top="261"/>
-                <Image Height="28" Source="Images/Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28"/>
-            </Canvas>
+        <Grid Margin="0,172,0,0" Background="#FFF9F7EB"></Grid>
+
+        <ScrollViewer HorizontalAlignment="Left" Height="373" Margin="118,196,0,0" VerticalAlignment="Top" Width="1132" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Height="979">
+
+                <StackPanel x:Name="instruction1" Orientation="Horizontal" Height="188" Width="1076" Canvas.Left="102" Canvas.Top="67">
+                    <Label Content="1." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
+                    <Label Width="44"></Label>
+                    <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
+                    <Label Width="72"></Label>
+                    <TextBox x:Name="i1" HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text=""  Width="553" FontSize="18"/>
+                    <Label Width="42"></Label>
+                    <TextBox x:Name="timer1" Text="-timer-" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="81" Canvas.Left="971" Canvas.Top="119" RenderTransformOrigin="0.581,1" FontSize="16" Foreground="#FF938B8B" MouseEnter="timer1_MouseEnter" MouseLeave="timer1_MouseLeave"/>
+                    <Label Content="min" FontSize="20" FontFamily="Californian FB" Margin="0,80,0,0" Height="28" VerticalAlignment="Top"  />
+                </StackPanel>
+
+                <StackPanel x:Name="instruction2" Orientation="Horizontal" Height="188" Width="1076" Canvas.Left="102" Canvas.Top="67">
+                    <Label Content="2." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
+                    <Label Width="44"></Label>
+                    <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
+                    <Label Width="72"></Label>
+                    <TextBox x:Name="i2" HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text=""  Width="553" FontSize="18"/>
+                    <Label Width="42"></Label>
+                    <TextBox x:Name="timer2" Text="-timer-" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="81" Canvas.Left="971" Canvas.Top="119" RenderTransformOrigin="0.581,1" FontSize="16" Foreground="#FF938B8B" MouseEnter="timer2_MouseEnter" MouseLeave="timer2_MouseLeave"/>
+                    <Label Content="min" FontSize="20" FontFamily="Californian FB" Margin="0,80,0,0" Height="28" VerticalAlignment="Top" Width="66"  />
+                    <Image x:Name="delete2" Height="28" Source="Images/Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28" MouseDown="delete2_MouseDown"/>
+
+                </StackPanel>
+
+                <StackPanel x:Name="instruction3" Orientation="Horizontal" Height="188" Width="1076" Canvas.Left="102" Canvas.Top="67" Visibility="Hidden">
+                    <Label Content="3." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
+                    <Label Width="44"></Label>
+                    <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
+                    <Label Width="72"></Label>
+                    <TextBox x:Name="i3" HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text=""  Width="553" FontSize="18"/>
+                    <Label Width="42"></Label>
+                    <TextBox x:Name="timer3" Text="-timer-" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="81" Canvas.Left="971" Canvas.Top="119" RenderTransformOrigin="0.581,1" FontSize="16" Foreground="#FF938B8B" MouseEnter="timer3_MouseEnter" MouseLeave="timer3_MouseLeave"/>
+                    <Label Content="min" FontSize="20" FontFamily="Californian FB" Margin="0,80,0,0" Height="28" VerticalAlignment="Top" Width="66"  />
+                    <Image x:Name="delete3" Height="28" Source="Images/Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28" MouseDown="delete3_MouseDown"/>
+                </StackPanel>
+
+                <StackPanel x:Name="instruction4" Orientation="Horizontal" Height="188" Width="1076" Canvas.Left="102" Canvas.Top="67" Visibility="Hidden">
+                    <Label Content="4." FontSize="20" FontFamily="Californian FB" Canvas.Left="105" Canvas.Top="67"/>
+                    <Label Width="44"></Label>
+                    <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="130" Height="130" Canvas.Left="170" Canvas.Top="67"/>
+                    <Label Width="72"></Label>
+                    <TextBox x:Name="i4" HorizontalAlignment="Left" Height="130" BorderBrush="Black" TextWrapping="Wrap" Text=""  Width="553" FontSize="18"/>
+                    <Label Width="42"></Label>
+                    <TextBox x:Name="timer4" Text="-timer-" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="81" Canvas.Left="971" Canvas.Top="119" RenderTransformOrigin="0.581,1" FontSize="16" Foreground="#FF938B8B" MouseEnter="timer4_MouseEnter" MouseLeave="timer4_MouseLeave"/>
+                    <Label Content="min" FontSize="20" FontFamily="Californian FB" Margin="0,80,0,0" Height="28" VerticalAlignment="Top" Width="66"  />
+                    <Image x:Name="delete4" Height="28" Source="Images/Image_Quit.png" Canvas.Left="1121" Canvas.Top="303" Width="28" MouseDown="delete4_MouseDown"/>
+                </StackPanel>
+            </StackPanel>
+
         </ScrollViewer>
-        <Image Source="Images/Image_Add.png" Margin="890,630,362,142"/>
-        <Label Content="Add more step" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Margin="930,630,0,0"/>
+
+        <Canvas Margin="0,560,0,10">
+            <Image x:Name="add" Source="Images/Image_Add.png" Height="27" Canvas.Left="854" Canvas.Top="33" Width="138" MouseDown="add_MouseDown" />
+            <Label Content="Add more step" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Margin="949,30,0,0" />
+            <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Margin="768,108,336,89" />
+            <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Margin="1000,108,104,89" Click="Button_Click"/>
+            <Button x:Name="previous" Content="Previous" FontSize="20" FontFamily="Calibri"  Width="175" Height="33" Margin="118,108,986,89" Click="previous_Click" />
+        </Canvas>
 
 
     </Grid>
