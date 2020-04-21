@@ -9,14 +9,21 @@
       Title="HomePage">
 
     <Grid RenderTransformOrigin="0.471,0.055" Margin="0,0,0,-2">
-        
-        
-        
+
+
+
         <Grid Background="#FF23B9A5"></Grid>
-        <Grid Background="#FFF9F7EB" Margin="0,143,0,0"></Grid>
+        <Grid Background="#FFF9F7EB" Margin="0,143,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="137*"/>
+                <ColumnDefinition Width="36*"/>
+                <ColumnDefinition Width="467*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
 
 
-        <ScrollViewer Foreground="Black" Margin="2,143,0,0" >
+
+        <ScrollViewer x:Name="homeRecipes" Foreground="Black" Margin="2,143,0,0" >
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Height="75" Width="1259" >
@@ -138,11 +145,6 @@
                         <Image x:Name="image33" Height="184" Source="Images/Image32.png" Stretch="Fill"/>
                         <Label Content="Others" FontSize="20"  Height="39" Width="79"/>
                     </StackPanel>
-
-
-
-
-
                 </StackPanel>
 
                 <StackPanel x:Name="popularP" Orientation="Horizontal" Width="1091" Height="79">
@@ -162,21 +164,41 @@
                 <Button Content="Following" FontSize="24" Margin="-1830,80,-900,0" Height="51" Width="151" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
                 <Button Content="Saved Recipes" FontSize="24" Margin="-1770,80,-900,0" Height="51" Width="213" Background="{x:Null}" RenderTransformOrigin="-0.814,0.986" FontFamily="Verdana" BorderBrush="{x:Null}" FontWeight="Bold"/>
 
-
             </StackPanel>
         </ScrollViewer>
 
+        <Canvas x:Name="result" Visibility="Hidden">
+            <Label Content="Result" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" FontSize="24" FontFamily="Verdana" RenderTransformOrigin="0.704,0.285" Height="43" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Canvas.Left="76" Canvas.Top="167"/>
+
+            <StackPanel Orientation="Vertical" Width="205" Background="#FFECE9D2" MouseEnter="veggieTaco_MouseEnter" MouseLeave="veggieTaco_MouseLeave" Canvas.Left="134" Canvas.Top="222">
+                <Image   Height="176" Source="Images/Image7.png" Stretch="Fill"/>
+                <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
+                <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
+                <Label Content="2054"  FontSize="12" Height="23" Margin="125,-20,32,0"/>
+                <Label Content="The best and refresh skack in " Height="55" Margin="23,0"/>
+            </StackPanel>
+        </Canvas>
+
         <Canvas >
             <Canvas Height="48" Width="1280" Canvas.Top="87" Background="#FF0F0F0F"></Canvas>
-            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="463" Canvas.Top="37" MouseEnter="textB_MouseEnter" Foreground="#FF938B8B" MouseLeave="textB_MouseLeave"/>
-            <Button Name="rightNow" Content="Right Now" HorizontalAlignment="Left" Margin="276,89,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
-            <Button Name="category" Content="Category" HorizontalAlignment="Left" Margin="424,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
-            <Button Name="popular" Content="Popular" HorizontalAlignment="Left" Margin="570,88,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="popular_Click"/>
-            <Button Name="following" Content="Following" HorizontalAlignment="Left" Margin="716,87,0,0" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}"/>
-            <Button Name="savedRecipe" Content="Saved Recipe" HorizontalAlignment="Left" Margin="860,87,0,0" VerticalAlignment="Top" Width="146" Height="46" Background="{x:Null}" FontSize="22" RenderTransformOrigin="1.328,0.413" Foreground="White" BorderBrush="{x:Null}"/>
-            <Label Content="Welcome John" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" FontSize="22" Canvas.Left="1106" Canvas.Top="87" Foreground="#FF8EB0D8"/>
+            <TextBox x:Name="textB" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="376" FontSize="20" Background="#FFFDFDFD" Canvas.Left="463" Canvas.Top="37" MouseEnter="textB_MouseEnter" Foreground="#FF938B8B" MouseLeave="textB_MouseLeave" KeyDown="textB_KeyDown"/>
+            <Button Name="home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Canvas.Left="200" Canvas.Top="89" Click="home_Click"/>
+            <Button Name="rightNow" Content="Right Now" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Canvas.Left="326" Canvas.Top="89"/>
+            <Button Name="category" Content="Category" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Canvas.Left="460" Canvas.Top="89"/>
+            <Button Name="popular" Content="Popular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="popular_Click" Canvas.Left="590" Canvas.Top="89"/>
+            <Button Name="following" Content="Following" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Height="46" Background="{x:Null}" FontSize="22" Foreground="White" BorderBrush="{x:Null}" Canvas.Left="720" Canvas.Top="87"/>
+            <Button Name="savedRecipe" Content="Saved Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Height="46" Background="{x:Null}" FontSize="22" RenderTransformOrigin="1.328,0.413" Foreground="White" BorderBrush="{x:Null}" Canvas.Left="854" Canvas.Top="89"/>
+            <Grid x:Name="ph" Height="135" Width="164" Canvas.Left="1106" Background="#FF0B6363" Opacity="0.5" Visibility="Hidden"/>
+            <StackPanel x:Name="profile_highlight" Orientation="Vertical" Height="133" Width="164" Canvas.Left="1106" MouseEnter="profile_highlight_MouseEnter" MouseLeave="profile_highlight_MouseLeave" MouseDown="profile_highlight_MouseDown">
+                <Label></Label>
+                <Image Name="user" Source="Images/Image_User.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="75" Canvas.Left="1151" Canvas.Top="10" Width="71" />
+                <Label Content="Welcome John" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" FontSize="22" Canvas.Left="1106" Canvas.Top="87" Foreground="#FF8EB0D8"/>
+            </StackPanel>
+
+
             <Image Name="search" Source="Images/Image361.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="39" Canvas.Left="411" Canvas.Top="35" Width="37"/>
-            <Image Name="user" Source="Images/Image_User.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="75" Canvas.Left="1151" Canvas.Top="10" Width="71"/>
+
+
         </Canvas>
 
     </Grid>

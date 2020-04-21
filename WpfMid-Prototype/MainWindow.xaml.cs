@@ -16,11 +16,13 @@ using WpfMid_Prototype.Database;
 
 namespace WpfMid_Prototype
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             

@@ -27,9 +27,9 @@
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
             <Canvas Background="#FFF9F7EB" Width="1280">
 
-                <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="816" Canvas.Top="532" Width="175" Height="33"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1042" Canvas.Top="532" Width="175" Height="33" Click="Button_Click_1"/>
-                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="79" Canvas.Top="532" Width="175" Height="33" Click="Button_Click"/>
+                <Button x:Name="exit" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="751" Canvas.Top="486" Width="175" Height="33" Click="exit_Click"/>
+                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1008" Canvas.Top="486" Width="175" Height="33" Click="Button_Click_1" RenderTransformOrigin="0.24,0.667"/>
+                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="140" Canvas.Top="486" Width="175" Height="33" Click="Button_Click"/>
 
                 <StackPanel x:Name="ingredient1" Orientation="Horizontal" Height="51" Width="841" Canvas.Left="189" Canvas.Top="54">
                     <TextBox x:Name="i1" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" Foreground="#FF938B8B" MouseEnter="i1_MouseEnter" MouseLeave="i1_MouseLeave" />
@@ -105,10 +105,10 @@
                     <Image x:Name="image4" Height="28" Source="Images/Image_Quit.png" Width="28" MouseDown="image4_MouseDown"/>
                 </StackPanel>
 
-                <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="296" Width="28" MouseDown="Image_MouseDown"/>
-                <Label Content="Add more ingredient" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="296"/>
+                <Image Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="276" Width="28" MouseDown="Image_MouseDown" RenderTransformOrigin="0.607,-0.321"/>
+                <Label Content="Add more ingredients" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="893" Canvas.Top="276"/>
 
-                <StackPanel Orientation="Horizontal" Height="29" Width="904" Canvas.Left="189" Canvas.Top="395">
+                <StackPanel Orientation="Horizontal" Height="29" Width="904" Canvas.Left="189" Canvas.Top="350">
                     <TextBox x:Name="a1" Text="Appliances" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" Canvas.Left="189" TextWrapping="Wrap" Canvas.Top="395" Width="200"  Foreground="#FF938B8B" MouseEnter="a1_MouseEnter" MouseLeave="a1_MouseLeave"/>
                     <Label Width="120"></Label>
                     <StackPanel x:Name="appliance2" Orientation="Horizontal">
@@ -127,9 +127,9 @@
                 </StackPanel>
 
 
-                <Label Content="Add more Appliances" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="467"/>
-                <Image x:Name="addAppliance" Height="28" Source="Images/Image_Add.png" Canvas.Left="849" Canvas.Top="467" Width="28" MouseDown="addAppliance_MouseDown"/>
-                
+                <Label Content="Add more Appliances" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="887" Canvas.Top="408"/>
+                <Image x:Name="addAppliance" Height="28" Source="Images/Image_Add.png" Canvas.Left="847" Canvas.Top="408" Width="28" MouseDown="addAppliance_MouseDown" RenderTransformOrigin="0.679,-0.429"/>
+
 
 
             </Canvas>

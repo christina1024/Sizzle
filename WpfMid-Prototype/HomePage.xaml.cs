@@ -27,7 +27,7 @@ namespace WpfMid_Prototype
 
         private void Menu_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void popular_Click(object sender, RoutedEventArgs e)
@@ -104,6 +104,33 @@ namespace WpfMid_Prototype
         private void milkTea_MouseLeave(object sender, MouseEventArgs e)
         {
             milkTea.Background = new SolidColorBrush(Color.FromRgb(236, 233, 210));
+        }
+
+        private void profile_highlight_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ph.Visibility = Visibility.Visible;
+        }
+
+        private void profile_highlight_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ph.Visibility = Visibility.Hidden;
+        }
+
+        private void profile_highlight_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Profile.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void textB_KeyDown(object sender, KeyEventArgs e)
+        {
+            homeRecipes.Visibility = Visibility.Hidden;
+            result.Visibility = Visibility.Visible;
+        }
+
+        private void home_Click(object sender, RoutedEventArgs e)
+        {
+            homeRecipes.Visibility = Visibility.Visible;
+            result.Visibility = Visibility.Hidden;
         }
     }
 }

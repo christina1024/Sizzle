@@ -20,13 +20,15 @@
         </Canvas>
 
         <Label Content="Basic Information" HorizontalAlignment="Left" Margin="175,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
-        <Label Content="Ingredients and Applicants" HorizontalAlignment="Left" Margin="398,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
+        <Label Content="Ingredients and Appliances" HorizontalAlignment="Left" Margin="398,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Instructions" HorizontalAlignment="Left" Margin="706,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
             <Canvas  Background="#FFF9F7EB" Width="1280" Height="633">
-                <Image Height="150" Source="Images/Image7.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67"/>
+                <Image x:Name="taco" Height="150" Source="Images/Image7.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67"/>
+                <Image x:Name="imageSub" Height="150" Source="Images/Image_Placeholder.png" Stretch="Fill" Width="150" Canvas.Left="316" Canvas.Top="67" Visibility="Hidden"/>
+                <Button x:Name="deleteImage" Content="delete"  Width="61" Height="30" FontSize="16" Background="#FFF0ECEC" Canvas.Left="364" Canvas.Top="231" Click="deleteImage_Click"/>
                 <Image Source="Images/Image_Placeholder.png" Stretch="Fill" Width="150" Height="150" Canvas.Left="122" Canvas.Top="67"/>
 
                 <Label Content="Recipe Name: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="45"/>
@@ -35,31 +37,16 @@
                 <Label Content="Prep Time: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="151"/>
                 <Label Content="Cook Time: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="204"/>
                 <Label Content="Portion: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="257"/>
-                <Label Content="Constraint: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="310"/>
-                <Label Content="Note: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="403"/>
-                <TextBox HorizontalAlignment="Left" Height="98" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="368" FontSize="16" Canvas.Left="728" Canvas.Top="403" Background="White"/>
-                <ComboBox x:Name="cookTime" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="132" Height="29" Canvas.Left="728" Canvas.Top="204" Text="--Select Time--" IsEditable="True" IsReadOnly="True" FontSize="16">
-                    <ComboBoxItem Content="20"></ComboBoxItem>
-                    <ComboBoxItem Content="40"></ComboBoxItem>
-                    <ComboBoxItem Content="60"></ComboBoxItem>
-                    <ComboBoxItem Content="80"></ComboBoxItem>
-                    <ComboBoxItem Content="100"></ComboBoxItem>
-                    <ComboBoxItem Content="120"></ComboBoxItem>
+                <Label Content="Restriction: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="310"/>
+                <Label Content="Note: &#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="585" Canvas.Top="394"/>
+                <TextBox HorizontalAlignment="Left" Height="63" BorderBrush="Black" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="368" FontSize="16" Canvas.Left="728" Canvas.Top="394" Background="White"/>
+                <TextBox x:Name="prepTime" Text="0" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="131" Canvas.Left="728" Canvas.Top="151" RenderTransformOrigin="0.581,1" FontSize="16"/>
+                <TextBox x:Name="portion" Text="0" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="71" Canvas.Left="758" Canvas.Top="257" RenderTransformOrigin="0.581,1" FontSize="16"/>
 
-                </ComboBox>
-                <ComboBox x:Name="prepTime" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="132" Height="29" Canvas.Left="728" Canvas.Top="151" Text="--Select Time--" IsEditable="True" IsReadOnly="True" FontSize="16">
-                    <ComboBoxItem Content="20"></ComboBoxItem>
-                    <ComboBoxItem Content="40"></ComboBoxItem>
-                    <ComboBoxItem Content="60"></ComboBoxItem>
-                    <ComboBoxItem Content="80"></ComboBoxItem>
-                    <ComboBoxItem Content="100"></ComboBoxItem>
-                    <ComboBoxItem Content="120"></ComboBoxItem>
+                <TextBox x:Name="cookTime" Text="0" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="131" Canvas.Left="730" Canvas.Top="204" RenderTransformOrigin="0.581,1" FontSize="16"/>
 
-                </ComboBox>
 
-                <TextBox x:Name="portion" Text="0" TextAlignment="Center" PreviewTextInput="NumberValidation" Height="28" Width="43" Canvas.Left="771" Canvas.Top="257" RenderTransformOrigin="0.581,1" FontSize="16"/>
-
-                <ComboBox x:Name="constraintbox" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="181" Height="29" Canvas.Left="727" Canvas.Top="312" Text="--Select Constraint--" IsEditable="True" IsReadOnly="True" FontSize="16">
+                <ComboBox x:Name="constraintbox" HorizontalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="Black" Width="181" Height="29" Canvas.Left="727" Canvas.Top="312" Text="--Select Restriction--" IsEditable="True" IsReadOnly="True" FontSize="16">
                     <ComboBoxItem Content="Vegan"></ComboBoxItem>
                     <ComboBoxItem Content="Vegetarian"></ComboBoxItem>
                     <ComboBoxItem Content="Dairy-Free"></ComboBoxItem>
@@ -102,19 +89,19 @@
 
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="866" Canvas.Top="151"/>
                 <Label Content="min" FontSize="20" FontFamily="Californian FB" Canvas.Left="866" Canvas.Top="204"/>
-                <Button x:Name="save" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="787" Canvas.Top="520" Width="175" Height="33"/>
-                <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1037" Canvas.Top="520" Width="175" Height="33" Click="next_Click"/>
-                <Image x:Name="light1" Height="47" Source="Images/1 Stars.png" Canvas.Left="728" Canvas.Top="98" Width="42" MouseEnter="stars1_MouseEnter"/>
-                <Image x:Name="light2" Height="47" Source="Images/1 Stars.png" Canvas.Left="758" Canvas.Top="98" Width="42" MouseEnter="stars2_MouseEnter"/>
-                <Image x:Name="light3" Height="47" Source="Images/1 Stars.png" Canvas.Left="788" Canvas.Top="98" Width="42" MouseEnter="stars3_MouseEnter"/>
-                <Image x:Name="light4" Height="47" Source="Images/1 Stars.png" Canvas.Left="818" Canvas.Top="98" Width="42" MouseEnter="stars4_MouseEnter"/>
-                <Image x:Name="light5" Height="47" Source="Images/1 Stars.png" Canvas.Left="848" Canvas.Top="98" Width="42" MouseEnter="stars5_MouseEnter"/>
+                <Button x:Name="save" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="786" Canvas.Top="497" Width="175" Height="33" Click="save_Click"/>
+                <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1039" Canvas.Top="497" Width="175" Height="33" Click="next_Click"/>
+                <Image x:Name="light1" Height="47" Source="Images/1 Stars.png" Canvas.Left="728" Canvas.Top="90" Width="42" MouseEnter="stars1_MouseEnter"/>
+                <Image x:Name="light2" Height="47" Source="Images/1 Stars.png" Canvas.Left="758" Canvas.Top="90" Width="42" MouseEnter="stars2_MouseEnter"/>
+                <Image x:Name="light3" Height="47" Source="Images/1 Stars.png" Canvas.Left="788" Canvas.Top="90" Width="42" MouseEnter="stars3_MouseEnter"/>
+                <Image x:Name="light4" Height="47" Source="Images/1 Stars.png" Canvas.Left="818" Canvas.Top="90" Width="42" MouseEnter="stars4_MouseEnter"/>
+                <Image x:Name="light5" Height="47" Source="Images/1 Stars.png" Canvas.Left="848" Canvas.Top="90" Width="42" MouseEnter="stars5_MouseEnter"/>
 
-                <Image x:Name="unlight1" Height="47" Source="Images/0 Stars.png" Canvas.Left="727" Canvas.Top="98" Width="43" Visibility="Hidden" MouseEnter="stars1_MouseEnter"/>
-                <Image x:Name="unlight2" Height="47" Source="Images/0 Stars.png" Canvas.Left="757" Canvas.Top="98" Width="43" Visibility="Hidden" MouseEnter="stars2_MouseEnter"/>
-                <Image x:Name="unlight3" Height="47" Source="Images/0 Stars.png" Canvas.Left="787" Canvas.Top="98" Width="42" Visibility="Hidden" MouseEnter="stars3_MouseEnter"/>
-                <Image x:Name="unlight4" Height="47" Source="Images/0 Stars.png" Canvas.Left="817" Canvas.Top="98" Width="42" Visibility="Hidden" MouseEnter="stars4_MouseEnter"/>
-                <Image x:Name="unlight5" Height="47" Source="Images/0 Stars.png" Canvas.Left="847" Canvas.Top="98" Width="42" Visibility="Hidden" MouseEnter="stars5_MouseEnter"/>
+                <Image x:Name="unlight1" Height="47" Source="Images/0 Stars.png" Canvas.Left="727" Canvas.Top="90" Width="43" MouseEnter="stars1_MouseEnter" Visibility="Hidden"/>
+                <Image x:Name="unlight2" Height="47" Source="Images/0 Stars.png" Canvas.Left="757" Canvas.Top="90" Width="43" MouseEnter="stars2_MouseEnter" Visibility="Hidden"/>
+                <Image x:Name="unlight3" Height="47" Source="Images/0 Stars.png" Canvas.Left="787" Canvas.Top="90" Width="42" Visibility="Hidden" MouseEnter="stars3_MouseEnter"/>
+                <Image x:Name="unlight4" Height="47" Source="Images/0 Stars.png" Canvas.Left="817" Canvas.Top="90" Width="42" Visibility="Hidden" MouseEnter="stars4_MouseEnter"/>
+                <Image x:Name="unlight5" Height="47" Source="Images/0 Stars.png" Canvas.Left="847" Canvas.Top="90" Width="42" Visibility="Hidden" MouseEnter="stars5_MouseEnter"/>
                 <Button x:Name="portionUp" Content="^" Canvas.Left="727" Canvas.Top="257" Width="26" Height="32" FontSize="24" Background="#FFF0ECEC" Click="portionUp_Click"/>
                 <Button x:Name="portionDown" Content="^" Canvas.Left="834" Canvas.Top="257" Width="26" Height="32" FontSize="24" Background="#FFF0ECEC" RenderTransformOrigin="0.5,0.5" Click="portionDown_Click">
                     <Button.RenderTransform>

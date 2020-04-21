@@ -250,5 +250,10 @@ namespace WpfMid_Prototype
                 }
             }
         }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

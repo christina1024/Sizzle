@@ -173,7 +173,7 @@ namespace WpfMid_Prototype
                         {
                             s[n].Visibility = Visibility.Hidden;
                             t[i].Content = t[n].Content;
-                            t[n].Content = "";
+                           // t[n].Content = "";
                             s[i].Visibility = Visibility.Visible;
                             break;
                         }
@@ -184,25 +184,25 @@ namespace WpfMid_Prototype
 
         private void b1_Click(object sender, RoutedEventArgs e)
         {
-            b1.Content = "";
+           
             c1.Visibility = Visibility.Hidden;
             sordConstraint();
         }
         private void b2_Click(object sender, RoutedEventArgs e)
         {
-            b2.Content = "";
+            
             c2.Visibility = Visibility.Hidden;
             sordConstraint();
         }
         private void b3_Click(object sender, RoutedEventArgs e)
         {
-            b3.Content = "";
+            
             c3.Visibility = Visibility.Hidden;
             sordConstraint();
         }
         private void b4_Click(object sender, RoutedEventArgs e)
         {
-            b4.Content = "";
+           
             c4.Visibility = Visibility.Hidden;
             sordConstraint();
         }
@@ -211,6 +211,18 @@ namespace WpfMid_Prototype
         {
             NavigationService.Navigate(new Uri("/UploadPage_2.xaml", UriKind.RelativeOrAbsolute));
             
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void deleteImage_Click(object sender, RoutedEventArgs e)
+        {
+            taco.Visibility = Visibility.Hidden;
+            imageSub.Visibility = Visibility.Visible;
+            deleteImage.Content = "upload";
         }
     }
 }

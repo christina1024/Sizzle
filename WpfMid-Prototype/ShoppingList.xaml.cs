@@ -88,8 +88,16 @@ namespace WpfMid_Prototype
 
         private void Canceldelete_Click(object sender, RoutedEventArgs e)
         {
-            clearAllPopup.IsOpen = false;
-            recipesMessage.Visibility = Visibility.Hidden;
+            if (clearAllPopup.IsOpen)
+            {
+                clearAllPopup.IsOpen = false;
+                recipesMessage.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                printAllPopup.IsOpen = false;
+            }
+            
         }
 
         private void b1_Click(object sender, RoutedEventArgs e)
@@ -198,6 +206,11 @@ namespace WpfMid_Prototype
                 recipesMessage.Visibility = Visibility.Hidden;
                 veggieTaco.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+            printAllPopup.IsOpen = true;
         }
     }
 }
