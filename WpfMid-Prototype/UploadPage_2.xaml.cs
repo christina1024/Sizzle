@@ -28,7 +28,7 @@ namespace WpfMid_Prototype
 
         private void NumberValidation(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+/");
+            Regex regex = new Regex("[^0-9/]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
@@ -254,6 +254,13 @@ namespace WpfMid_Prototype
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ingredient2_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (! ingredient2.IsEnabled) {
+                message1.Visibility = Visibility.Visible;
+            }
         }
     }
 }
