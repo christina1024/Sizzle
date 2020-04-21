@@ -31,7 +31,7 @@ namespace WpfMid_Prototype
             string focontent = (e.Source as Button).Content.ToString();
             if (focontent == "Follow")
             {
-                fo.Content = "Followed";
+                fo.Content = "Following";
             }
             else
             {

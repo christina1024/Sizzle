@@ -15,7 +15,7 @@
             <Image Source="Images/4 Stars.png" Stretch="Fill" Canvas.Left="880" Canvas.Top="174" Height="36" Width="150" RenderTransformOrigin="-0.419,1.013"/>
             <Label Content="1231" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" FontSize="18" Margin="880,56,0,0"/>
             <Label Content="13" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="100" Margin="880,116,0,0" RenderTransformOrigin="-0.045,0.441"/>
-            <Button x:Name="fo" Content="Follow" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" FontSize="18" Click="Button_Click" RenderTransformOrigin="0.945,0.557" Canvas.Left="1086" Canvas.Top="59" Background="#FFF9F7EB"/>
+            <Button x:Name="fo" Content="Follow" HorizontalAlignment="Center" VerticalAlignment="Center" Width="85" FontSize="18" Click="Button_Click" RenderTransformOrigin="0.945,0.557" Canvas.Left="1086" Canvas.Top="59" Background="#FFF9F7EB"/>
         </Canvas>
         <Canvas Margin="100,46,657,478">
 
