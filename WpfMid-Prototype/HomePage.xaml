@@ -197,7 +197,7 @@
 
 
             <Image Name="search" Source="Images/Image361.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="39" Canvas.Left="411" Canvas.Top="35" Width="37"/>
-            <Image Name="user" Source="Images/Image_User.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="75" Canvas.Left="1151" Canvas.Top="10" Width="71"/>
+           
             <Button Height="266" RenderTransformOrigin="0.5,0.5" Opacity="0" Canvas.Left="511" Canvas.Top="220" Width="205" VerticalAlignment="Top" Click="Button_VeggieTacos">
                 <Button.RenderTransform>
                     <TransformGroup>

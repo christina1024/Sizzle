@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfMid_Prototype"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="1280"
+      d:DesignHeight="800" d:DesignWidth="1280"
       Title="ShoppingList">
     <Grid x:Name="mainGrid" Background="#FFF9F7EB">
         <Grid.ColumnDefinitions>
@@ -14,20 +14,11 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="73*"/>
         </Grid.ColumnDefinitions>
-        <Canvas Background="#FF23B9A5" Margin="0,0,0,587" Grid.ColumnSpan="4"></Canvas>
+        <Canvas Background="#FF23B9A5" Grid.ColumnSpan="4" Margin="0,0,0,635" ></Canvas>
 
-        <Grid Background="#FF1B1B1A" Margin="2,89,0,597" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-        </Grid>
+        <Grid Background="#FF1B1B1A" Margin="2,83,0,635" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5"/>
 
-        <StackPanel x:Name="RecipeGrid" Orientation="Vertical" Height="145" VerticalAlignment="Bottom" Margin="46,0,0,324"  >
+        <StackPanel x:Name="RecipeGrid" Orientation="Vertical" Height="145"  Margin="74,231,596,424" Grid.ColumnSpan="2"  >
 
             <StackPanel x:Name="chocolate" Orientation="Horizontal">
                 <Label x:Name="chocolate2" Content="Chocolate Cake" FontSize="20"  Width="225" />
@@ -42,7 +33,7 @@
         </StackPanel>
 
 
-        <Grid Background="#FFECE9D2" Margin="82,149,114,109" Grid.Column="1" Grid.ColumnSpan="3">
+        <Grid Background="#FFECE9D2" Margin="82,149,114,126" Grid.Column="1" Grid.ColumnSpan="3">
 
             <ScrollViewer Name="ingredient_view" Margin="154,83,10,10">
 
@@ -82,13 +73,13 @@
 
             </ScrollViewer>
             <Label Content="Ingredients:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="56" Width="147" FontSize="24" RenderTransformOrigin="0.612,0.836" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxNewIngredient" HorizontalAlignment="Left"  Height="27" Margin="182,18,0,0" TextWrapping="Wrap" Text="Add New Ingredient" VerticalAlignment="Top" Width="273" Foreground="#FF938B8B" MouseEnter="textBoxNewIngredient_MouseEnter" MouseLeave="textBoxNewIngredient_MouseLeave"/>
+            <TextBox x:Name="textBoxNewIngredient" HorizontalAlignment="Left"  Height="27" Margin="182,18,0,0" TextWrapping="Wrap" Text="Add New Ingredient" VerticalAlignment="Top" Width="273" Foreground="#FF938B8B" MouseEnter="textBoxNewIngredient_MouseEnter" MouseLeave="textBoxNewIngredient_MouseLeave" FontSize="18"/>
             <Button Name="addNew" Content="Add" HorizontalAlignment="Left" Margin="470,18,0,0" VerticalAlignment="Top" Width="46" Height="27" Click="addNew_Click" FontSize="16" RenderTransformOrigin="0.476,-0.22" Background="#FF85BBAA"/>
             <Label x:Name="errorMessage" Content="*Ingredient section cannot be empty" Margin="207,37,136,391" Foreground="#FFFF3131" Visibility="Hidden"/>
         </Grid>
 
 
-        <Label Content="Shopping List" HorizontalAlignment="Left" Margin="43,23,0,0" VerticalAlignment="Top" Height="80" Width="414" FontSize="43" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" Grid.Column="1"/>
+        <Label Content="Shopping List" HorizontalAlignment="Left" Margin="43,23,0,0" VerticalAlignment="Top" Height="60" Width="414" FontSize="43" RenderTransformOrigin="0.634,0.375" FontFamily="Arial Black" Grid.Column="1"/>
         <Label Content="Recipes:" HorizontalAlignment="Left" Margin="46,165,0,0" VerticalAlignment="Top" Height="53" Width="113" FontSize="24" RenderTransformOrigin="-1.373,0.54" FontWeight="Bold"/>
 
 
@@ -99,7 +90,7 @@
             <Grid Height="177" Width="469" Background="Black">
                 <Grid Background="#FF92C7BE" Margin="0,10,0,0" HorizontalAlignment="Right" Width="491"></Grid>
                 <Label Content="Are you sure you want to delete " HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" FontSize="31" Height="103"/>
-                <Label Content="all recipes and ingredients" HorizontalAlignment="Left" Margin="50,76,0,0" VerticalAlignment="Top" FontSize="31" Height="103"/>
+                <Label Content="all recipes and ingredients?" HorizontalAlignment="Left" Margin="50,76,0,0" VerticalAlignment="Top" FontSize="31" Height="103"/>
                 <Button x:Name="deleteRecipe" Content="Delete" HorizontalAlignment="Left" Margin="109,131,0,0" VerticalAlignment="Top" Width="85" Height="32" FontSize="14" Background="#FFC6E0D9" Click="deleteRecipe_Click"/>
                 <Button x:Name="Canceldelete" Content="Cancel" HorizontalAlignment="Left" Margin="282,131,0,0" VerticalAlignment="Top" Width="85" Height="32" FontSize="14" Background="#FFC6E0D9" Click="Canceldelete_Click" RenderTransformOrigin="0.376,0.969"/>
 
@@ -118,7 +109,7 @@
 
         <Label x:Name="savedMessage" Content="Shopping List has been saved" HorizontalAlignment="Left" Margin="82,537,0,0" VerticalAlignment="Top" Width="282" FontSize="20" Grid.Column="1" Foreground="#FF5D3F3F" Visibility="Hidden"/>
 
-        <Grid x:Name="recipesMessage" Margin="356,196,260,398" Grid.ColumnSpan="2" Background="#FFA4A397" Visibility="Hidden">
+        <Grid x:Name="recipesMessage" Margin="356,231,260,394" Grid.ColumnSpan="2" Background="#FFA4A397" Visibility="Hidden">
             <Grid Background="#FFE2DFCB" Margin="0,6,0,0"/>
             <Label Content="Ingredients from this recipe will be removed." HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="22" Height="44" Width="442" Margin="0,6,0,0"/>
             <Label Content="Are you wish to continue?" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="22" Height="43" Margin="91,35,0,0"/>

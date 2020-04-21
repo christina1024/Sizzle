@@ -20,22 +20,22 @@ namespace WpfMid_Prototype
     /// </summary>
     public partial class ShoppingList : Page
     {
-       
+
 
         public ShoppingList()
-        {          
+        {
             InitializeComponent();
         }
 
         private void addNew_Click(object sender, RoutedEventArgs e)
         {
-            if(textBoxNewIngredient.Text !="" && textBoxNewIngredient.Text != "Add New Ingredient")
+            if (textBoxNewIngredient.Text != "" && textBoxNewIngredient.Text != "Add New Ingredient")
             {
                 StackPanel[] a = { a1, a2, a3, a4, a5, a6 };
                 Label[] t = { t1, t2, t3, t4, t5, t6 };
-                for (int i=0; i<6; i++)
+                for (int i = 0; i < 6; i++)
                 {
-                    if(!a[i].IsVisible)
+                    if (!a[i].IsVisible)
                     {
                         t[i].Content = textBoxNewIngredient.Text;
                         a[i].Visibility = Visibility.Visible;
@@ -50,7 +50,7 @@ namespace WpfMid_Prototype
             }
         }
 
-       
+
 
         private void textBoxNewIngredient_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -88,7 +88,7 @@ namespace WpfMid_Prototype
 
         private void Canceldelete_Click(object sender, RoutedEventArgs e)
         {
-            if (clearAllPopup.IsOpen)
+            if (recipesMessage.IsVisible)
             {
                 clearAllPopup.IsOpen = false;
                 recipesMessage.Visibility = Visibility.Hidden;
@@ -97,7 +97,7 @@ namespace WpfMid_Prototype
             {
                 printAllPopup.IsOpen = false;
             }
-            
+
         }
 
         private void b1_Click(object sender, RoutedEventArgs e)
@@ -108,8 +108,8 @@ namespace WpfMid_Prototype
         }
 
         private void save_Click(object sender, RoutedEventArgs e)
-        {           
-            savedMessage.Visibility=Visibility.Visible;
+        {
+            savedMessage.Visibility = Visibility.Visible;
         }
 
         private void reorder()
@@ -185,24 +185,27 @@ namespace WpfMid_Prototype
 
         private void deleteRecipeR_Click(object sender, RoutedEventArgs e)
         {
-            if (buttonIndicator == 1) {
+            if (buttonIndicator == 1)
+            {
                 if (t1.Content.Equals("Egg"))
                 {
                     a1.Visibility = Visibility.Hidden;
                     reorder();
                     recipesMessage.Visibility = Visibility.Hidden;
-                    if (veggieTaco.IsVisible) {
+                    if (veggieTaco.IsVisible)
+                    {
                         veggieTaco.Visibility = Visibility.Hidden;
-                        chocolate2.Content = veggieTaco2.Content; 
+                        chocolate2.Content = veggieTaco2.Content;
                     }
                     else
                     {
                         chocolate.Visibility = Visibility.Hidden;
                     }
-                    
+
                 }
             }
-            else {
+            else
+            {
                 recipesMessage.Visibility = Visibility.Hidden;
                 veggieTaco.Visibility = Visibility.Hidden;
             }
