@@ -132,5 +132,11 @@ namespace WpfMid_Prototype
             homeRecipes.Visibility = Visibility.Visible;
             result.Visibility = Visibility.Hidden;
         }
+
+        private void Button_VeggieTacos(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewPage.xaml", UriKind.RelativeOrAbsolute));
+
+        }
     }
 }

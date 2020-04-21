@@ -55,9 +55,14 @@ namespace WpfMid_Prototype
 
         }
 
+        private void Button_Follow(object sender, RoutedEventArgs e)
+        {
+            Follow.Content = Follow.Content == "Follow" ? "Following" : "Follow";
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Follow.Content = "Following";
+
         }
     }
 }
