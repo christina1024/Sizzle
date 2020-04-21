@@ -45,6 +45,78 @@ namespace WpfMid_Prototype
 
         }
 
+        private void stars1_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (light1.IsVisible) { starchanger(light1); }
+            else { starchanger(unlight1); }
+
+        }
+        private void stars2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (light1.IsVisible) { starchanger(light2); }
+            else { starchanger(unlight2); }
+        }
+        private void stars3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (light1.IsVisible) { starchanger(light3); }
+            else { starchanger(unlight3); }
+        }
+        private void stars4_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (light1.IsVisible) { starchanger(light4); }
+            else { starchanger(unlight4); }
+        }
+        private void stars5_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (light1.IsVisible) { starchanger(light5); }
+            else { starchanger(unlight5); }
+        }
+
+        private void starchanger(Image name)
+        {
+            Image[] starImage = { light1, light2, light3, light4, light5 };
+            Image[] starImage2 = { unlight1, unlight2, unlight3, unlight4, unlight5 };
+            int num = 20;
+            for (int i = 0; i < 5; i++)
+            {
+                if (starImage[i] == name)
+                {
+                    for (int s = i; s >= 0; s--)
+                    {
+                        starImage[s].Visibility = Visibility.Visible;
+                        starImage2[s].Visibility = Visibility.Hidden;
+                    }
+                    for (int t = i + 1; t < 5; t++)
+                    {
+                        starImage2[t].Visibility = Visibility.Visible;
+                        starImage[t].Visibility = Visibility.Hidden;
+                    }
+                    num = i;
+                    break;
+                }
+            }
+            if (num > 10)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (starImage2[i] == name)
+                    {
+                        for (int s = i; s >= 0; s--)
+                        {
+                            starImage[s].Visibility = Visibility.Visible;
+                            starImage2[s].Visibility = Visibility.Hidden;
+                        }
+                        for (int t = i + 1; t < 5; t++)
+                        {
+                            starImage2[t].Visibility = Visibility.Visible;
+                            starImage[t].Visibility = Visibility.Hidden;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
         private void slValue_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (slValue.Value == 3)
@@ -63,26 +135,6 @@ namespace WpfMid_Prototype
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ii2.Visibility = Visibility.Hidden;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            ii1.Visibility = Visibility.Hidden;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            ei1.Visibility = Visibility.Hidden;
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            ei2.Visibility = Visibility.Hidden;
-        }
-
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
             result.Visibility = Visibility.Visible;
@@ -93,8 +145,14 @@ namespace WpfMid_Prototype
             result.Visibility = Visibility.Hidden;
             ii1.Visibility = Visibility.Hidden;
             ii2.Visibility = Visibility.Hidden;
+            ii3.Visibility = Visibility.Hidden;
+            ii4.Visibility = Visibility.Hidden;
+            ii5.Visibility = Visibility.Hidden;
             ei1.Visibility = Visibility.Hidden;
             ei2.Visibility = Visibility.Hidden;
+            ei3.Visibility = Visibility.Hidden;
+            ei4.Visibility = Visibility.Hidden;
+            ei5.Visibility = Visibility.Hidden;
             cb1.IsChecked = false;
             cb2.IsChecked = false;
             cb3.IsChecked = false;
@@ -157,42 +215,142 @@ namespace WpfMid_Prototype
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (ii1l.Content == "" )
+            if (ac.Text != "" && ac.Text != "Add Craving")
             {
-                ii1.Visibility = Visibility.Visible;
-                ii1l.Content = ac.Text;
-                ii1b.Visibility = Visibility.Visible;
-            }
-            else if (ii1l.Content != "" & ii2l.Content == "")
-            {
-                ii2.Visibility = Visibility.Visible;
-                ii2l.Content = ac.Text;
-                ii2b.Visibility = Visibility.Visible;
+                StackPanel[] ii = { ii1, ii2, ii3, ii4, ii5 };
+                Label[] iil = { ii1l, ii2l, ii3l, ii4l, ii5l };
+                for (int i = 0; i < 5; i++)
+                {
+                    if (!ii[i].IsVisible)
+                    {
+                        iil[i].Content = ac.Text;
+                        ii[i].Visibility = Visibility.Visible;
+                        break;
+                    }
+                }
             }
             else
             {
-
             }
         }
+        private void iireorder()
+        {
+            StackPanel[] ii = { ii1, ii2, ii3, ii4, ii5 };
+            Label[] iil = { ii1l, ii2l, ii3l, ii4l, ii5l };
 
+            for (int i = 0; i < 5; i++)
+            {
+                if (!ii[i].IsVisible)
+                {
+                    for (int s = i + 1; s < 5; s++)
+                    {
+                        if (ii[s].IsVisible)
+                        {
+                            ii[s].Visibility = Visibility.Hidden;
+                            iil[i].Content = iil[s].Content;
+                            ii[i].Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+        
+        private void ii1c(object sender, RoutedEventArgs e)
+        {
+            ii1.Visibility = Visibility.Hidden;
+            iireorder();
+        }
+        private void ii2c(object sender, RoutedEventArgs e)
+        {
+            ii2.Visibility = Visibility.Hidden;
+            iireorder();
+        }
+        private void ii3c(object sender, RoutedEventArgs e)
+        {
+            ii3.Visibility = Visibility.Hidden;
+            iireorder();
+        }
+        private void ii4c(object sender, RoutedEventArgs e)
+        {
+            ii4.Visibility = Visibility.Hidden;
+            iireorder();
+        }
+        private void ii5c(object sender, RoutedEventArgs e)
+        {
+            ii5.Visibility = Visibility.Hidden;
+            iireorder();
+        }
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            if (ei1l.Content == "")
+            if (ac.Text != "" && ac.Text != "Add Craving")
             {
-                ei1.Visibility = Visibility.Visible;
-                ei1l.Content = ac.Text;
-                ei1b.Visibility = Visibility.Visible;
-            }
-            else if (ei1l.Content != "" & ei2l.Content == "")
-            {
-                ei2.Visibility = Visibility.Visible;
-                ei2l.Content = ac.Text;
-                ei2b.Visibility = Visibility.Visible;
+                StackPanel[] ei = { ei1, ei2, ei3, ei4, ei5 };
+                Label[] eil = { ei1l, ei2l, ei3l, ei4l, ei5l };
+                for (int i = 0; i < 5; i++)
+                {
+                    if (!ei[i].IsVisible)
+                    {
+                        eil[i].Content = ac.Text;
+                        ei[i].Visibility = Visibility.Visible;
+                        break;
+                    }
+                }
             }
             else
             {
-
             }
         }
+        private void eireorder()
+        {
+            StackPanel[] ei = { ei1, ei2, ei3, ei4, ei5 };
+            Label[] eil = { ei1l, ei2l, ei3l, ei4l, ei5l };
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (!ei[i].IsVisible)
+                {
+                    for (int s = i + 1; s < 5; s++)
+                    {
+                        if (ei[s].IsVisible)
+                        {
+                            ei[s].Visibility = Visibility.Hidden;
+                            eil[i].Content = eil[s].Content;
+                            ei[i].Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void ei1c(object sender, RoutedEventArgs e)
+        {
+            ei1.Visibility = Visibility.Hidden;
+            eireorder();
+        }
+        private void ei2c(object sender, RoutedEventArgs e)
+        {
+            ei2.Visibility = Visibility.Hidden;
+            eireorder();
+        }
+        private void ei3c(object sender, RoutedEventArgs e)
+        {
+            ei3.Visibility = Visibility.Hidden;
+            eireorder();
+        }
+        private void ei4c(object sender, RoutedEventArgs e)
+        {
+            ei4.Visibility = Visibility.Hidden;
+            eireorder();
+        }
+        private void ei5c(object sender, RoutedEventArgs e)
+        {
+            ei5.Visibility = Visibility.Hidden;
+            eireorder();
+        }
     }
+
 }

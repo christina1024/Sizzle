@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Converters;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -36,6 +37,21 @@ namespace WpfMid_Prototype
             {
                 fo.Content = "Follow";
             }
+        }
+
+        private void prc(object sender, RoutedEventArgs e)
+        {
+            prb.Background = Brushes.LightCyan;
+            srb.Background = Brushes.LightSeaGreen;
+            re1.Visibility = Visibility.Visible;
+            re2.Visibility = Visibility.Visible;
+        }
+
+        private void src(object sender, RoutedEventArgs e)
+        {
+            srb.Background = Brushes.LightCyan;
+            prb.Background = Brushes.LightSeaGreen;
+            re2.Visibility = Visibility.Hidden;
         }
     }
 }

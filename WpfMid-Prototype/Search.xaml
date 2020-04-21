@@ -29,13 +29,25 @@
                     <ScrollViewer Name="with" Margin="10,0,0,0" Width="240" Height="230" Background="#FFECE9D2">
                         <StackPanel>
                             <Label Content="Included Ingredient" FontSize="20" BorderThickness="1" Background="#FF23B9A5"/>
-                            <StackPanel x:Name="ii1" Orientation="Horizontal">
+                            <StackPanel x:Name="ii1" Orientation="Horizontal" Visibility="Hidden">
                                 <Label x:Name="ii1l" Content="" FontSize="20" Width="180"/>
-                                <Button x:Name="ii1b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click_1"/>
+                                <Button x:Name="ii1b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="ii1c"/>
                             </StackPanel>
-                            <StackPanel x:Name="ii2" Orientation="Horizontal">
+                            <StackPanel x:Name="ii2" Orientation="Horizontal" Visibility="Hidden">
                                 <Label x:Name="ii2l" Content="" FontSize="20" Width="180"/>
-                                <Button x:Name="ii2b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"/>
+                                <Button x:Name="ii2b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ii2c"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ii3" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ii3l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ii3b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ii3c"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ii4" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ii4l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ii4b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ii4c"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ii5" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ii5l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ii5b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ii5c"/>
                             </StackPanel>
 
                         </StackPanel>
@@ -45,14 +57,27 @@
                     <ScrollViewer Name="without" Margin="0" Width="240" Height="230" Background="#FFECE9D2">
                         <StackPanel>
                             <Label Content="Excluded Ingredient" FontSize="20" BorderThickness="1" Background="#FF23B9A5"/>
-                            <StackPanel x:Name="ei1" Orientation="Horizontal">
+                            <StackPanel x:Name="ei1" Orientation="Horizontal" Visibility="Hidden">
                                 <Label x:Name="ei1l" Content="" FontSize="20" Width="180"/>
-                                <Button x:Name="ei1b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_2"/>
+                                <Button x:Name="ei1b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="ei1c"/>
                             </StackPanel>
-                            <StackPanel x:Name="ei2" Orientation="Horizontal">
+                            <StackPanel x:Name="ei2" Orientation="Horizontal" Visibility="Hidden">
                                 <Label x:Name="ei2l" Content="" FontSize="20" Width="180"/>
-                                <Button x:Name="ei2b" Content="X" Visibility="Hidden" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_3"/>
+                                <Button x:Name="ei2b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ei2c"/>
                             </StackPanel>
+                            <StackPanel x:Name="ei3" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ei3l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ei3b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ei3c"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ei4" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ei4l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ei4b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ei4c"/>
+                            </StackPanel>
+                            <StackPanel x:Name="ei5" Orientation="Horizontal" Visibility="Hidden">
+                                <Label x:Name="ei5l" Content="" FontSize="20" Width="180"/>
+                                <Button x:Name="ei5b" Content="X" Width="30" FontSize="20" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Click="ei5c"/>
+                            </StackPanel>
+
                         </StackPanel>
                     </ScrollViewer>
                 </StackPanel>
@@ -103,11 +128,21 @@
                 </StackPanel>
 
 
-                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Canvas Height="47" Margin="0,10,0,0">
                     <Label Content="Difficulty" FontSize="20" Width="150"/>
-                    <Image Source="Images/5 Stars.png" Stretch="Fill" Height="34" Width="192"/>
+                    <Image x:Name="light1" Height="47" Source="Images/1 Stars.png" Canvas.Left="150" Width="42" MouseEnter="stars1_MouseEnter"/>
+                    <Image x:Name="light2" Height="47" Source="Images/1 Stars.png" Canvas.Left="180" Width="42" MouseEnter="stars2_MouseEnter"/>
+                    <Image x:Name="light3" Height="47" Source="Images/1 Stars.png" Canvas.Left="210" Width="42" MouseEnter="stars3_MouseEnter" RenderTransformOrigin="0.5,0.564"/>
+                    <Image x:Name="light4" Height="47" Source="Images/1 Stars.png" Canvas.Left="240" Width="42" MouseEnter="stars4_MouseEnter"/>
+                    <Image x:Name="light5" Height="47" Source="Images/1 Stars.png" Canvas.Left="270" Width="42" MouseEnter="stars5_MouseEnter"/>
 
-                </StackPanel>
+                    <Image x:Name="unlight1" Height="47" Source="Images/0 Stars.png" Canvas.Left="150" Width="43" MouseEnter="stars1_MouseEnter" Visibility="Hidden"/>
+                    <Image x:Name="unlight2" Height="47" Source="Images/0 Stars.png" Canvas.Left="180" Width="43" MouseEnter="stars2_MouseEnter" Visibility="Hidden"/>
+                    <Image x:Name="unlight3" Height="47" Source="Images/0 Stars.png" Canvas.Left="210" Width="42" Visibility="Hidden" MouseEnter="stars3_MouseEnter"/>
+                    <Image x:Name="unlight4" Height="47" Source="Images/0 Stars.png" Canvas.Left="240" Width="42" Visibility="Hidden" MouseEnter="stars4_MouseEnter"/>
+                    <Image x:Name="unlight5" Height="47" Source="Images/0 Stars.png" Canvas.Left="270" Width="42" Visibility="Hidden" MouseEnter="stars5_MouseEnter"/>
+
+                </Canvas>
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
                     <Button x:Name="clear" Content="Clear All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0" Click="clear_Click" Background="#FF23B9A5"/>
                     <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="36" FontSize="24" Margin="100,0,0,0" Click="searchButton_Click" Background="#FF23B9A5"/>
