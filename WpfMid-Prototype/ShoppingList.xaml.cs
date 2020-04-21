@@ -186,23 +186,26 @@ namespace WpfMid_Prototype
         private void deleteRecipeR_Click(object sender, RoutedEventArgs e)
         {
             if (buttonIndicator == 1)
-            {
-                if (t1.Content.Equals("Egg"))
+            {chocolate.Visibility = Visibility.Hidden;
+                recipesMessage.Visibility = Visibility.Hidden;
+                if (chocolate2.Content.Equals("Chocolate Cake")) 
                 {
-                    a1.Visibility = Visibility.Hidden;
-                    reorder();
-                    recipesMessage.Visibility = Visibility.Hidden;
+                    
+                    
+                    if (t1.Content.Equals("Egg"))
+                    {                    
+                        a1.Visibility = Visibility.Hidden;
+                        reorder();                  
+                    }
                     if (veggieTaco.IsVisible)
                     {
-                        veggieTaco.Visibility = Visibility.Hidden;
+                        chocolate.Visibility = Visibility.Visible;
                         chocolate2.Content = veggieTaco2.Content;
+                        veggieTaco.Visibility = Visibility.Hidden;
                     }
-                    else
-                    {
-                        chocolate.Visibility = Visibility.Hidden;
-                    }
-
                 }
+
+                
             }
             else
             {
