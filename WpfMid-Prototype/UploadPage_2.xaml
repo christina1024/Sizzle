@@ -13,7 +13,7 @@
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
                 <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="Black"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Click="Button_Click"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
             </Grid>
@@ -27,9 +27,9 @@
         <ScrollViewer HorizontalAlignment="Left" Height="633" Margin="0,167,0,0" VerticalAlignment="Top" Width="1280">
             <Canvas Background="#FFF9F7EB" Width="1280">
 
-                <Button x:Name="exit" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="751" Canvas.Top="486" Width="175" Height="33" Click="exit_Click"/>
-                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1008" Canvas.Top="486" Width="175" Height="33" Click="Button_Click_1" RenderTransformOrigin="0.24,0.667"/>
-                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="140" Canvas.Top="486" Width="175" Height="33" Click="Button_Click"/>
+                <Button x:Name="exit" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="789" Canvas.Top="497" Width="175" Height="33" Click="exit_Click"/>
+                <Button Content="Next Step" FontSize="20" FontFamily="Calibri" Canvas.Left="1039" Canvas.Top="497" Width="175" Height="33" Click="Button_Click_1" RenderTransformOrigin="0.24,0.667"/>
+                <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="140" Canvas.Top="497" Width="175" Height="33" Click="Button_Click"/>
 
                 <StackPanel x:Name="ingredient1" Orientation="Horizontal" Height="51" Width="841" Canvas.Left="189" Canvas.Top="54">
                     <TextBox x:Name="i1" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" Foreground="#FF938B8B" MouseEnter="i1_MouseEnter" MouseLeave="i1_MouseLeave" />

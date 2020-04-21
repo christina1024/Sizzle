@@ -13,7 +13,7 @@
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
                 <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Click="previous_Click"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Click="Button_Click"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="Black"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="780,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2"/>
             </Grid>
@@ -24,7 +24,7 @@
         <Label Content="Instructions" HorizontalAlignment="Left" Margin="706,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
-        <Grid Margin="0,172,0,0" Background="#FFF9F7EB"></Grid>
+        <Grid Margin="0,167,0,0" Background="#FFF9F7EB"></Grid>
 
         <ScrollViewer HorizontalAlignment="Left" Height="373" Margin="118,196,0,0" VerticalAlignment="Top" Width="1132" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical" Height="979">
@@ -83,9 +83,9 @@
         <Canvas Margin="0,560,0,10">
             <Image x:Name="add" Source="Images/Image_Add.png" Height="27" Canvas.Left="854" Canvas.Top="19" Width="138" MouseDown="add_MouseDown" />
             <Label Content="Add more steps" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontFamily="Californian FB" Height="48" Canvas.Left="951" Canvas.Top="19" />
-            <Button x:Name="exit" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Click="exit_Click" Canvas.Left="766" Canvas.Top="83" />
-            <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Click="next_Click" Canvas.Left="999" Canvas.Top="83"/>
-            <Button x:Name="previous" Content="Previous" FontSize="20" FontFamily="Calibri"  Width="175" Height="33" Click="previous_Click" Canvas.Left="122" Canvas.Top="83" />
+            <Button x:Name="exit" Content="Save and Exit" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Click="exit_Click" Canvas.Left="789" Canvas.Top="105" />
+            <Button x:Name="next" Content="Next Step" FontSize="20" FontFamily="Calibri" Width="175" Height="33" Click="next_Click" Canvas.Left="1039" Canvas.Top="105"/>
+            <Button x:Name="previous" Content="Previous" FontSize="20" FontFamily="Calibri"  Width="175" Height="33" Click="previous_Click" Canvas.Left="140" Canvas.Top="105" />
         </Canvas>
 
 

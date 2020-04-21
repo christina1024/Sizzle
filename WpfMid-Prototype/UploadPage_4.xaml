@@ -8,7 +8,7 @@
       d:DesignHeight="800" d:DesignWidth="1280"
       Title="UploadPage_4">
 
-    <Grid RenderTransformOrigin="0.471,0.055" Opacity="0.8">
+    <Grid RenderTransformOrigin="0.471,0.055">
         <Canvas Background="#FF23B9A5" Margin="0,0,0,-266" HorizontalAlignment="Left" Width="1280" Height="800" VerticalAlignment="Top">
             <Label Content="Upload Recipe&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-2.077" FontFamily="Arial Black" FontSize="40" Canvas.Left="468" Canvas.Top="32"/>
             <Grid x:Name="progressBar" HorizontalAlignment="Left" Height="18" Margin="112,101,0,0" Grid.Column="4" VerticalAlignment="Top" Width="1040" Grid.Row="1" Grid.ColumnSpan="4">
@@ -16,14 +16,14 @@
                     <ColumnDefinition Width="71*"/>
                     <ColumnDefinition Width="33*"/>
                 </Grid.ColumnDefinitions>
-                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFF9F7EB" Click="Button_Upload2"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFF9F7EB" Click="Button_Upload1"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFF9F7EB" Grid.ColumnSpan="2" Click="Button_Upload3"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Click="Button_Upload2"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Click="Button_Upload1"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="520,0,0,0" VerticalAlignment="Top" Width="260" Background="#FFECE9D2" Grid.ColumnSpan="2" Click="Button_Upload3"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="70,0,0,0" VerticalAlignment="Top" Width="260" Background="Black" Grid.Column="1"/>
             </Grid>
-            <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="882" Canvas.Top="728" Width="154" Height="34" Background="#FFCDDEDA" Click="Button_Save"/>
-            <Button Content="Publish" FontSize="20" FontFamily="Calibri" Canvas.Left="1068" Canvas.Top="728" Width="152" Height="34" Background="#FFCDDEDA" Click="Button_Publish"/>
-            <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Top="728" Width="312" Height="34" Canvas.Left="58" Background="#FFCDDEDA" Click="Button_Upload3"/>
+            <Button Content="Save and Exit" FontSize="20" FontFamily="Calibri" Canvas.Left="882" Canvas.Top="680" Width="154" Height="34" Background="#FFCDDEDA" Click="Button_Save"/>
+            <Button Content="Publish" FontSize="20" FontFamily="Calibri" Canvas.Left="1076" Canvas.Top="680" Width="152" Height="34" Background="#FFCDDEDA" Click="Button_Publish"/>
+            <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Top="680" Width="172" Height="34" Canvas.Left="112" Background="#FFCDDEDA" Click="Button_Upload3"/>
         </Canvas>
 
         <Label Content="Basic Information" HorizontalAlignment="Left" Margin="175,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
@@ -31,10 +31,10 @@
         <Label Content="Instructions" HorizontalAlignment="Left" Margin="706,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Preview" HorizontalAlignment="Left" Margin="986,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
 
-        <ScrollViewer HorizontalAlignment="Left" Width="1280" Margin="0,172,0,127">
-            <Canvas Background="#fafafa" Width="1280" Height="496">
+        <ScrollViewer HorizontalAlignment="Left" Width="1270" Margin="0,167,0,73">
+            <Canvas Background="#fafafa" Width="1240" Height="560">
 
-                <Canvas Background="#FFF9F7EB" Height="503" Width="1280">
+                <Canvas Background="#FFF9F7EB" Height="550" Width="1280">
 
                     <Canvas Height="230" Background="#FFF9F7EB" Width="320">
 
@@ -46,7 +46,7 @@
                         <Label Content="Portions: 2" FontSize="18" Canvas.Left="10" Canvas.Top="78"/>
                         <Label Content="Difficulity: " FontSize="18" Canvas.Left="10" Canvas.Top="102"/>
                         <Label Content="By" FontSize="20" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="176"/>
-                        <Image Height="28" Source="Images/4 Stars.jpg" Canvas.Left="94" Canvas.Top="102" Width="110"/>
+                        <Image Height="28" Source="Images/4 Stars.png" Canvas.Left="94" Canvas.Top="102" Width="110"/>
                         <Label Content="- Dairy Free" FontSize="16" Canvas.Left="208" FontStyle="Italic"/>
                         <Label Content="- Vegetarian" FontSize="16" Canvas.Left="204" Canvas.Top="16" FontStyle="Italic"/>
                         <Label Content="Rating:" FontSize="18" Canvas.Left="10" Canvas.Top="54"/>
