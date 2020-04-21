@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -27,6 +28,8 @@ namespace WpfMid_Prototype
     /// </summary>
     public partial class Page1 : Page
     {
+        private int time = 15;
+        private DispatcherTimer Timer;
         private int hours;
         private int minutes;
         private int seconds;
@@ -35,7 +38,7 @@ namespace WpfMid_Prototype
 
         public Page1()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void Follow_Click(object sender, RoutedEventArgs e)
@@ -58,6 +61,7 @@ namespace WpfMid_Prototype
 
         private void TimerButton_Click(object sender, RoutedEventArgs e)
         {
+            /*
             //hours = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
             //minutes = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
             //seconds = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
@@ -78,11 +82,43 @@ namespace WpfMid_Prototype
                 timer.Elapsed += timer1_Tick; 
                 //timer1.elapsed += new eventhandler(timer1_tick);
                 trig = 1;
-            //timer.Start();
+            //timer.Start();*/
+            timeLabel.Visibility = Visibility.Visible;
+            TimerButton.Visibility = Visibility.Hidden;
+            Timer = new DispatcherTimer();
+            Timer.Interval = new TimeSpan(0, 0, 1);
+            Timer.Tick += Timer_Tick;
+            Timer.Start();
         }
 
+        private void Timer_Tick(object sender, EventArgs e) 
+        {
+            if(time > 0)
+            {
+                if(time <= 10)
+                {
+                    if (time % 2 == 0)
+                    {
+                        timeLabel.Foreground = new SolidColorBrush(Color.FromRgb(251, 108, 108));
+                    }
+                    else {
+                        timeLabel.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                    }
+                    time--;
+                    if(time % 60 > 9) { timeLabel.Content ="00:00:"+ time % 60;}
+                    else { timeLabel.Content = "00:00:0" + time % 60; }
+                    
 
-        private void timer1_Tick(object sender, EventArgs e)
+                }
+                else
+                {
+                    time--;
+                    if (time % 60 > 9) { timeLabel.Content = "00:00:" + time % 60; }
+                    else { timeLabel.Content = "00:00:0" + time % 60; }
+                }
+            }
+        }
+        /*private void timer1_Tick(object sender, EventArgs e)
         {
             seconds--;
             if (seconds <= 0)
@@ -134,7 +170,7 @@ namespace WpfMid_Prototype
             //label2.Text = minutes.ToString();
             //label3.Text = seconds.ToString();
         }
-
+        */
         private void Ingredients_Click(object sender, RoutedEventArgs e)
         {
             IngredientStack.BringIntoView();

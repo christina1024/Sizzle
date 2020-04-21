@@ -149,7 +149,7 @@
 
                     </Canvas>
 
-                    
+
                 </Canvas>
 
 
@@ -163,8 +163,8 @@
                                     <GradientStop Color="#FFCDDEDA" Offset="1"/>
                                 </LinearGradientBrush>
                             </TabItem.Background>
-                            <ScrollViewer HorizontalAlignment="Left" Height="406" VerticalAlignment="Top" Width="934" Canvas.Left="336" Canvas.Top="222" Margin="0,0,-16,0">
-                                <Grid Background="#FFF9F7EB" Height="506">
+                            <ScrollViewer HorizontalAlignment="Left" Height="406" VerticalAlignment="Top" Width="916" Canvas.Left="336" Canvas.Top="222">
+                                <Grid Background="#FFF9F7EB" Height="506" Width="916">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="185*"/>
                                         <ColumnDefinition Width="733*"/>
@@ -180,7 +180,7 @@
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="4. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="287" Height="56" Grid.ColumnSpan="2" Margin="0,278,250,172"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="5. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="373" Height="56" Grid.ColumnSpan="2" Margin="0,357,250,93"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="6. Bake for 30 minutes." FontFamily="Californian FB" FontSize="20" Canvas.Top="462" Height="56" Grid.ColumnSpan="2" Margin="10,440,250,10"/>
-                                    <Label x:Name="timeLabel" Content="00:00:00" Canvas.Left="772" Canvas.Top="54" Height="56" Width="142" RenderTransformOrigin="0.5,0.5" FontSize="36" Grid.Column="1" Margin="581,30,10,420" Visibility="Hidden">
+                                    <Label x:Name="timeLabel" Content="00:00:15" Canvas.Left="772" Canvas.Top="54" Height="56" Width="142" RenderTransformOrigin="0.5,0.5" FontSize="36" Grid.Column="1" Margin="564,14,25,436" Visibility="Hidden">
                                         <Label.RenderTransform>
                                             <TransformGroup>
                                                 <ScaleTransform ScaleY="1" ScaleX="1"/>
