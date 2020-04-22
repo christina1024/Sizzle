@@ -191,5 +191,30 @@ namespace WpfMid_Prototype
             NavigationService.Navigate(new Uri("/Profile.xaml", UriKind.RelativeOrAbsolute));
 
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void textB_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (textB.Text == "Enter Keywords for Recipes")
+            {
+                textB.Text = "";
+
+                textB.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            }
+        }
+
+        private void textB_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (textB.Text == "")
+            {
+                textB.Text = "Enter Keywords for Recipes";
+
+                textB.Foreground = new SolidColorBrush(Color.FromRgb(147, 139, 139));
+            }
+        }
     }
 }

@@ -11,7 +11,10 @@
     <Grid Background="#FFF9F7EB">
         <Grid Background="#FF23B9A5" Margin="0,0,0,676"></Grid>
         <Grid Background="#FF020202" Margin="0,63,0,652"></Grid>
-        <Image Source="Images/logo.png" Stretch="Fill" Margin="435,-22,668,634" />
+        <Image Source="Images/logo.png" Stretch="Fill" Margin="106,-27,997,639" MouseDown="Image_MouseDown" RenderTransformOrigin="0.418,0.5" />
+
+        <Image Name="search" Source="Images/Image361.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Margin="884,20,330,700"/>
+        <TextBox x:Name="textB" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" Width="284" FontSize="18" Background="#FFFDFDFD"  Foreground="#FF938B8B" Margin="949,20,0,0" MouseEnter="textB_MouseEnter" MouseLeave="textB_MouseLeave"/>
 
         <ScrollViewer Margin="0,89,0,0">
             <Canvas Height="784" Width="1280" Canvas.Top="95">
@@ -154,7 +157,7 @@
 
 
                 <Canvas Height="461" Background="#FFF9F7EB" Canvas.Left="366" Canvas.Top="240" Width="924">
-                    <TabControl TabStripPlacement="Top" Width="924" BorderBrush="#FFCDDEDA" Background="#FFCDDEDA" Canvas.Left="-10" Height="470" Canvas.Top="-46">
+                    <TabControl TabStripPlacement="Top" Width="900" BorderBrush="#FFCDDEDA" Background="#FFCDDEDA" Canvas.Left="-10" Height="470" Canvas.Top="-46">
                         <TabItem Header="Instructions" Width="300" FontSize="20" FontFamily="Calibri">
 
                             <TabItem.Background>
@@ -163,7 +166,7 @@
                                     <GradientStop Color="#FFCDDEDA" Offset="1"/>
                                 </LinearGradientBrush>
                             </TabItem.Background>
-                            <ScrollViewer HorizontalAlignment="Left" Height="406" VerticalAlignment="Top" Width="916" Canvas.Left="336" Canvas.Top="222">
+                            <ScrollViewer HorizontalAlignment="Left" Height="406" VerticalAlignment="Top" Width="894" Canvas.Left="336" Canvas.Top="222">
                                 <Grid Background="#FFF9F7EB" Height="506" Width="916">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="185*"/>
@@ -174,24 +177,16 @@
                                     <Border BorderThickness="1" Height="78" Background="#FFCDDEDA" Canvas.Top="119" Width="924" Opacity="0.495" Grid.ColumnSpan="2" Margin="-6,418,0,10"/>
                                     <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="58" Width="46" Grid.Column="1" Margin="677,440,10,26"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="2. Add Vegetable broth and water and bring back to a boil over medium heat." FontFamily="Californian FB" FontSize="20" Canvas.Top="136" Height="56" Grid.ColumnSpan="2" Margin="0,108,250,342"/>
-                                    <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="136" Width="46" Grid.Column="1" Margin="645,108,41,358"/>
+                                    <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="136" Width="46" Grid.Column="1" Margin="613,108,72,358" RenderTransformOrigin="0.033,0.55"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="3. Preheat oven to 375." FontFamily="Californian FB" FontSize="20" Canvas.Top="226" Height="56" Grid.ColumnSpan="2" Margin="0,195,250,255"/>
                                     <Border BorderThickness="1" Height="78" Background="#FFCDDEDA" Canvas.Top="272" Width="924" Opacity="0.495" Grid.ColumnSpan="2" Margin="-6,256,0,172"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="4. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="287" Height="56" Grid.ColumnSpan="2" Margin="0,278,250,172"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="5. Add cooked quina to a large mixing bowl and add remaining ingredients." FontFamily="Californian FB" FontSize="20" Canvas.Top="373" Height="56" Grid.ColumnSpan="2" Margin="0,357,250,93"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="6. Bake for 30 minutes." FontFamily="Californian FB" FontSize="20" Canvas.Top="462" Height="56" Grid.ColumnSpan="2" Margin="10,440,250,10"/>
-                                    <Label x:Name="timeLabel" Content="00:00:15" Canvas.Left="772" Canvas.Top="54" Height="56" Width="142" RenderTransformOrigin="0.5,0.5" FontSize="36" Grid.Column="1" Margin="564,14,25,436" Visibility="Hidden">
-                                        <Label.RenderTransform>
-                                            <TransformGroup>
-                                                <ScaleTransform ScaleY="1" ScaleX="1"/>
-                                                <SkewTransform AngleY="0" AngleX="0"/>
-                                                <RotateTransform Angle="0"/>
-                                                <TranslateTransform/>
-                                            </TransformGroup>
-                                        </Label.RenderTransform>
+                                    <Label x:Name="timeLabel" Content="00:00:15" Canvas.Left="772" Canvas.Top="54" Height="56" Width="142" RenderTransformOrigin="0.5,0.5" FontSize="36" Grid.Column="1" Margin="538,14,51,436" Visibility="Hidden">
                                     </Label>
 
-                                    <Image x:Name="TimerButton" Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="452" Width="46" Grid.Column="1" Margin="645,30,41,436" RenderTransformOrigin="-0.272,0.475" MouseDown="TimerButton_Click"/>
+                                    <Image x:Name="TimerButton" Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="452" Width="46" Grid.Column="1" Margin="613,30,72,436" RenderTransformOrigin="-0.272,0.475" MouseDown="TimerButton_Click"/>
                                 </Grid>
                             </ScrollViewer>
 
