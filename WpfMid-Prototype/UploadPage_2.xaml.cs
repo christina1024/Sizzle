@@ -38,6 +38,7 @@ namespace WpfMid_Prototype
                 n.Text = "";
 
                 n.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                message1.Visibility = Visibility.Hidden;
             }
         }
         private void mouseLeave(TextBox n, string s) {
@@ -261,6 +262,11 @@ namespace WpfMid_Prototype
             if (! ingredient2.IsEnabled) {
                 message1.Visibility = Visibility.Visible;
             }
+        }
+
+        private void i1_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            message1.Visibility = Visibility.Hidden;
         }
     }
 }

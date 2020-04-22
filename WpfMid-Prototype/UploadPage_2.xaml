@@ -32,7 +32,7 @@
                 <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Left="140" Canvas.Top="497" Width="175" Height="33" Click="Button_Click"/>
 
                 <StackPanel x:Name="ingredient1" Orientation="Horizontal" Height="51" Width="841" Canvas.Left="189" Canvas.Top="54">
-                    <TextBox x:Name="i1" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" Foreground="#FF938B8B" MouseEnter="i1_MouseEnter" MouseLeave="i1_MouseLeave" />
+                    <TextBox x:Name="i1" Text="Ingredient" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black" TextWrapping="Wrap"  Width="200" Foreground="#FF938B8B" MouseEnter="i1_MouseEnter" MouseLeave="i1_MouseLeave" MouseDown="i1_MouseDown" />
                     <Label Width="36"></Label>
                     <TextBox x:Name="s1" Text="Substitution" Height="29" FontSize="20" FontFamily="Calibri" BorderBrush="Black"  TextWrapping="Wrap" Width="200" Foreground="#FF938B8B" MouseEnter="s1_MouseEnter" MouseLeave="s1_MouseLeave"/>
                     <Label Width="102"></Label>
