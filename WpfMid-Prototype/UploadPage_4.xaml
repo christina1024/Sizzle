@@ -26,6 +26,8 @@
             <Button Content="Previous" FontSize="20" FontFamily="Calibri" Canvas.Top="680" Width="172" Height="34" Canvas.Left="112" Background="#FFCDDEDA" Click="Button_Upload3"/>
         </Canvas>
 
+        
+
         <Label Content="Basic Information" HorizontalAlignment="Left" Margin="175,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Ingredients and Appliances" HorizontalAlignment="Left" Margin="398,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
         <Label Content="Instructions" HorizontalAlignment="Left" Margin="706,119,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Height="48"/>
@@ -50,7 +52,7 @@
                         <Label Content="- Dairy Free" FontSize="16" Canvas.Left="208" FontStyle="Italic"/>
                         <Label Content="- Vegetarian" FontSize="16" Canvas.Left="204" Canvas.Top="16" FontStyle="Italic"/>
                         <Label Content="Rating:" FontSize="18" Canvas.Left="10" Canvas.Top="54"/>
-                        <Image Height="28" Source="Images/0 Stars.png" Canvas.Left="71" Canvas.Top="60" Width="110"/>
+                        <Image Height="28" Source="Images/4 Stars.png" Canvas.Left="71" Canvas.Top="60" Width="110"/>
                         <Label Content="Prep Time: 15min    Cook Time: 1h" FontSize="18" Canvas.Left="10" Canvas.Top="126"/>
                     </Canvas>
                     <Canvas Height="230" Background="#FFF9F7EB" Canvas.Left="340" Width="939" >
@@ -195,6 +197,8 @@
             </Canvas>
         </ScrollViewer>
 
+        
+        
 
     </Grid>
 </Page>

@@ -53,5 +53,10 @@ namespace WpfMid_Prototype
             prb.Background = Brushes.LightSeaGreen;
             re2.Visibility = Visibility.Hidden;
         }
+
+        private void image3_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

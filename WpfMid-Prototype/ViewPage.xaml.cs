@@ -117,6 +117,12 @@ namespace WpfMid_Prototype
                     else { timeLabel.Content = "00:00:0" + time % 60; }
                 }
             }
+
+            if (time == 0)
+            {
+                stopTimer.Visibility = Visibility.Visible;
+                stopTimerb.Visibility = Visibility.Visible;
+            }
         }
         /*private void timer1_Tick(object sender, EventArgs e)
         {
@@ -215,6 +221,12 @@ namespace WpfMid_Prototype
 
                 textB.Foreground = new SolidColorBrush(Color.FromRgb(147, 139, 139));
             }
+        }
+
+        private void stopTimerb_Click(object sender, RoutedEventArgs e)
+        {
+            stopTimer.Visibility = Visibility.Hidden;
+            stopTimerb.Visibility = Visibility.Hidden;
         }
     }
 }

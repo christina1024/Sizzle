@@ -16,7 +16,7 @@
         <Canvas  Background="#FFF9F7EB" Width="1280" Height="800" Margin="0,80,0,0">
             <StackPanel HorizontalAlignment="Left" Height="800" Margin="0,-90,0,0" VerticalAlignment="Top" Width="500">
                 <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBox x:Name="sb" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" FontSize="20" Width="300" MouseEnter="sb_MouseEnter" Foreground="#FF938B8B" MouseLeave="sb_MouseLeave" Margin="100,100,0,0" TextChanged="sb_TextChanged"/>
+                    <TextBox x:Name="sb" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" Text="Enter Keywords for Recipes" VerticalAlignment="Top" FontSize="20" Width="300" MouseEnter="sb_MouseEnter" Foreground="#FF938B8B" MouseLeave="sb_MouseLeave" Margin="100,100,0,0" TextChanged="sb_TextChanged" KeyDown="sb_KeyDown" />
                     <Image x:Name="search" Source="Images/Image36.png" Stretch="Fill" RenderTransformOrigin="1.382,0.474" Height="38" Width="37" Margin="0,100,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonDown="search_MouseLeftButtonDown"/>
                 </StackPanel>
 
@@ -82,7 +82,7 @@
                     </ScrollViewer>
                 </StackPanel>
                 <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Margin="0,10,0,0">
-                    <Label Content="Dietary Constraints" FontSize="20" Margin="0,0,0,0"/>
+                    <Label Content="Dietary Restriction" FontSize="20" Margin="0,0,0,0"/>
                     <StackPanel x:Name="dietary" Orientation="Horizontal">
                         <CheckBox x:Name="cb1" Content="Vegan" Width="110">
                             <CheckBox.LayoutTransform>
@@ -151,7 +151,7 @@
             </StackPanel>
             <Canvas x:Name="result" Margin="534,92,40,386" Visibility="Hidden">
                 <StackPanel Orientation="Vertical" Width="212" Height="222" >
-                    <Image Height="166" Source="Images/Image7.png" Stretch="Fill" Width="183" Margin="16,0"/>
+                    <Image Height="166" Source="Images/Image7.png" Stretch="Fill" Width="183" Margin="16,0" MouseDown="Image_MouseDown"/>
                     <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" FontSize="18" Margin="56,0,0,0"/>
                     <Image Source="Images/5 Stars.png" Stretch="Fill" Height="16" Margin="58,0,82,0"/>
                     <Label Content="2054"  FontSize="12" Height="23" Margin="125,-20,32,0"/>

@@ -351,6 +351,16 @@ namespace WpfMid_Prototype
             ei5.Visibility = Visibility.Hidden;
             eireorder();
         }
+
+        private void sb_KeyDown(object sender, KeyEventArgs e)
+        {
+            result.Visibility = Visibility.Visible;
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 
 }

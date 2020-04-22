@@ -35,7 +35,7 @@
                     </StackPanel>
                     <Border x:Name="re1" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="1076" >
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="139">
-                            <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0"/>
+                            <Image x:Name="image3" Source="Images/Image7.png" Stretch="Fill" Height="114" Width="121" Margin="10,0,0,0" MouseDown="image3_MouseDown"/>
                             <StackPanel Margin="0,0,0,0" Height="139">
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="40" Width="851">
                                     <Label Content="Veggie Taco" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Width="240" Margin="10,10,0,0"/>

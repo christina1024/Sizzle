@@ -34,7 +34,7 @@
                         <Image Height="28" Source="Images/4 Stars.png" Canvas.Left="93" Canvas.Top="90" Width="110"/>
                         <Label Content="- Dairy Free" FontSize="16" Canvas.Left="208" FontStyle="Italic"/>
                         <Label Content="- Vegetarian" FontSize="16" Canvas.Left="204" Canvas.Top="16" FontStyle="Italic"/>
-                        <Label Content="Star: " FontSize="16" Canvas.Left="10" Canvas.Top="39" RenderTransformOrigin="0.51,0.412"/>
+                        <Label Content="Rating: " FontSize="16" Canvas.Left="10" Canvas.Top="39" RenderTransformOrigin="0.51,0.412"/>
                         <Image Height="28" Source="Images/4 Stars.png" Canvas.Left="55" Canvas.Top="42" Width="110"/>
                         <Label Content="Prep Time: 15min    CookTime: 1h" FontSize="16" Canvas.Left="10" Canvas.Top="109"/>
                         <Button Content="Button" Canvas.Left="48" Canvas.Top="136" Width="51" Height="50" Opacity="0" Click="Button_Click"/>
@@ -224,5 +224,9 @@
 
             </Canvas>
         </ScrollViewer>
+
+        <Image x:Name="stopTimer" Source="Images/Image_Clock.png" Margin="451,124,377,262" Visibility="Hidden"/>
+        <Button x:Name="stopTimerb" Margin="572,511,494,201" Content="STOP" FontSize="30" FontFamily="Calibri" Click="stopTimerb_Click" Visibility="Hidden"/>
+
     </Grid>
 </Page>
