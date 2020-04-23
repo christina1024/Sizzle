@@ -228,5 +228,17 @@ namespace WpfMid_Prototype
             stopTimer.Visibility = Visibility.Hidden;
             stopTimerb.Visibility = Visibility.Hidden;
         }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            var num = Convert.ChangeType(shoppingList.Content, typeof(int)) as int?;
+            num++;
+            shoppingList.Content = num;
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ShoppingList.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

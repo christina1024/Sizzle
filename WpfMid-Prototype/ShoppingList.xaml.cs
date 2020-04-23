@@ -81,7 +81,11 @@ namespace WpfMid_Prototype
         private void deleteRecipe_Click(object sender, RoutedEventArgs e)
         {
             clearAllPopup.IsOpen = false;
-            ingredientsPanel.Visibility = Visibility.Hidden;
+            StackPanel[] a = { a1, a2, a3, a4, a5, a6 };
+            for(int i=0; i < 6; i++)
+            {
+                a[i].Visibility = Visibility.Hidden;
+            }
             RecipeGrid.Visibility = Visibility.Hidden;
             savedMessage.Visibility = Visibility.Hidden;
         }

@@ -33,7 +33,7 @@ namespace WpfMid_Prototype
 
         private void Button_Save(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Profile.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/HomePage.xaml", UriKind.RelativeOrAbsolute));
 
         }
 
