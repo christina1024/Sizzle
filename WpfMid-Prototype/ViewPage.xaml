@@ -109,12 +109,15 @@
                                             <Image Height="20" Source="Images/Image_Refresh.png" Width="20" Margin="10,95,27,385"/>
                                             <Image Height="20" Source="Images/Image_Refresh.png" Width="20" Margin="10,55,27,425"/>
                                             <Image Height="20" Source="Images/Image_Refresh.png" Width="20" Margin="10,10,27,470" MouseDown="Quinoa_Click"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,211,10,269" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,175,10,305" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,135,10,345" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,95,10,385" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" RenderTransformOrigin="6.7,-7.3" Margin="94,55,10,425" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
-                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,10,10,470" RenderTransformOrigin="0.75,1.9" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
+                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,211,10,269" Grid.Column="3" />
+                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,175,10,305" Grid.Column="3" />
+                                            <Image Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,135,10,345" Grid.Column="3" />
+                                            <Image x:Name="a3" Height="20" Source="Images/Image_Add.png" Width="20" Margin="94,95,10,385" Grid.Column="3" MouseDown="Image_MouseDown_3"/>
+                                            <Image x:Name="a2" Height="20" Source="Images/Image_Add.png" Width="20" RenderTransformOrigin="6.7,-7.3" Margin="94,55,10,425" Grid.Column="3" MouseDown="Image_MouseDown_2"/>
+                                            <Image x:Name="a1" Height="20" Source="Images/Image_Add.png" Width="20" Margin="95,12,11,472" RenderTransformOrigin="0.75,1.9" Grid.Column="3" MouseDown="Image_MouseDown_1"/>
+                                            <Image x:Name="s1"  Source="Images/Image_Sub.png" Margin="79,0,-3,457" RenderTransformOrigin="0.75,1.9" Grid.Column="3" MouseDown="Image_MouseDown_11" Visibility="Hidden"/>
+                                            <Image x:Name="s2"  Source="Images/Image_Sub.png" Margin="79,45,-3,412" RenderTransformOrigin="0.75,1.9" Grid.Column="3" MouseDown="Image_MouseDown_22" Visibility="Hidden"/>
+                                            <Image x:Name="s3"  Source="Images/Image_Sub.png" Margin="79,82,-3,375" RenderTransformOrigin="0.75,1.9" Grid.Column="3" MouseDown="Image_MouseDown_33" Visibility="Hidden"/>
 
                                         </Grid>
 
@@ -160,7 +163,7 @@
 
 
                 <Canvas Height="461" Background="#FFF9F7EB" Canvas.Left="366" Canvas.Top="240" Width="924">
-                    <TabControl TabStripPlacement="Top" Width="900" BorderBrush="#FFCDDEDA" Background="#FFCDDEDA" Canvas.Left="-10" Height="470" Canvas.Top="-46">
+                    <TabControl TabStripPlacement="Top" Width="900" BorderBrush="#FFCDDEDA" Background="#FFCDDEDA" Canvas.Left="-10" Height="464" Canvas.Top="-46">
                         <TabItem Header="Instructions" Width="300" FontSize="20" FontFamily="Calibri">
 
                             <TabItem.Background>
@@ -169,7 +172,7 @@
                                     <GradientStop Color="#FFCDDEDA" Offset="1"/>
                                 </LinearGradientBrush>
                             </TabItem.Background>
-                            <ScrollViewer HorizontalAlignment="Left" Height="406" VerticalAlignment="Top" Width="894" Canvas.Left="336" Canvas.Top="222">
+                            <ScrollViewer HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="894" Canvas.Left="336" Canvas.Top="222">
                                 <Grid Background="#FFF9F7EB" Height="506" Width="916">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="185*"/>
@@ -178,7 +181,7 @@
                                     <Border BorderThickness="1" Height="78" Background="#FFCDDEDA" Canvas.Top="434" Width="924" Opacity="0.495" Grid.ColumnSpan="2" Margin="-6,91,0,337"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="1. Heat a medium saucepan over medium heat. Once hot, add rinsed." FontFamily="Californian FB" FontSize="20" Canvas.Top="58" Height="56" Grid.ColumnSpan="2" Margin="0,30,250,420"/>
                                     <Border BorderThickness="1" Height="78" Background="#FFCDDEDA" Canvas.Top="119" Width="924" Opacity="0.495" Grid.ColumnSpan="2" Margin="-6,418,0,10"/>
-                                    <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="58" Width="46" Grid.Column="1" Margin="677,440,10,26"/>
+                                    <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="58" Width="46" Grid.Column="1" Margin="613,440,72,26" RenderTransformOrigin="0.543,0.1"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="2. Add Vegetable broth and water and bring back to a boil over medium heat." FontFamily="Californian FB" FontSize="20" Canvas.Top="136" Height="56" Grid.ColumnSpan="2" Margin="0,108,250,342"/>
                                     <Image Height="40" Source="Images/Image_Clock.png" Canvas.Left="852" Canvas.Top="136" Width="46" Grid.Column="1" Margin="613,108,72,358" RenderTransformOrigin="0.033,0.55"/>
                                     <TextBlock Canvas.Left="77" TextWrapping="Wrap" Text="3. Preheat oven to 375." FontFamily="Californian FB" FontSize="20" Canvas.Top="226" Height="56" Grid.ColumnSpan="2" Margin="0,195,250,255"/>

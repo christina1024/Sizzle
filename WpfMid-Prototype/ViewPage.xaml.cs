@@ -231,8 +231,53 @@ namespace WpfMid_Prototype
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
+            a1.Visibility = Visibility.Hidden;
+            s1.Visibility = Visibility.Visible;
+            addlist();
+        }
+
+        private void Image_MouseDown_11(object sender, MouseButtonEventArgs e)
+        {
+            s1.Visibility = Visibility.Hidden;
+            a1.Visibility = Visibility.Visible;
+            sublist();
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            a2.Visibility = Visibility.Hidden;
+            s2.Visibility = Visibility.Visible;
+            addlist();
+        }
+
+        private void Image_MouseDown_22(object sender, MouseButtonEventArgs e)
+        {
+            s2.Visibility = Visibility.Hidden;
+            a2.Visibility = Visibility.Visible;
+            sublist();
+        }
+        private void Image_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+            a3.Visibility = Visibility.Hidden;
+            s3.Visibility = Visibility.Visible;
+            addlist();
+        }
+
+        private void Image_MouseDown_33(object sender, MouseButtonEventArgs e)
+        {
+            s3.Visibility = Visibility.Hidden;
+            a3.Visibility = Visibility.Visible;
+            sublist();
+        }
+
+        private void addlist() {
             var num = Convert.ChangeType(shoppingList.Content, typeof(int)) as int?;
             num++;
+            shoppingList.Content = num;
+        }
+        private void sublist() {
+            var num = Convert.ChangeType(shoppingList.Content, typeof(int)) as int?;
+            num--;
             shoppingList.Content = num;
         }
 
