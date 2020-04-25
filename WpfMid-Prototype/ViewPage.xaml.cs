@@ -58,9 +58,11 @@ namespace WpfMid_Prototype
             
         }
 
+        int num;
 
         private void TimerButton_Click(object sender, RoutedEventArgs e)
         {
+            num = 0;
             /*
             //hours = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
             //minutes = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
@@ -118,10 +120,11 @@ namespace WpfMid_Prototype
                 }
             }
 
-            if (time == 0)
+            if (time == 0 && num==0)
             {
                 stopTimer.Visibility = Visibility.Visible;
                 stopTimerb.Visibility = Visibility.Visible;
+                num++;
             }
         }
         /*private void timer1_Tick(object sender, EventArgs e)
